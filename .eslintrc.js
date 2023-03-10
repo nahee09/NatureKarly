@@ -199,5 +199,11 @@ module.exports = {
         components: ['Link'],
       },
     ],
+    // 'react-hooks/exhaustive-deps': [
+    //   "warn",
+    //   {
+    //     'addionalHooks': 'useRecoilCallback'
+    //   }
+    // ]
 	},
 };

@@ -16,14 +16,15 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-	  "src/**/*.{jsx,js}": [
+    "src/**/*.{jsx,js}": [
       "npm run lint:fix",
       "npm run format:fix"
     ]
-	},
+  },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
@@ -40,6 +41,8 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "recoil-devtools-logger": "0.4.0",
+    "recoil-persist": "4.2.0"
   }
 }
