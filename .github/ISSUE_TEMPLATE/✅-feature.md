@@ -2,7 +2,7 @@
 name: "✅ FEATURE"
 about: 기능 구현에 대한 이슈를 작성
 title: "✅ Feat: 간단한 제목 #이슈번호 [23.mm.dd]"
-labels: Accessibility, bug, Feature, Setting
+labels: Accessibility, bug, Chore, Feature, Setting, Simplify, Update
 assignees: hyunwlee-dev, semin99, baeseongjae, BORAVORAYOON, nahee09
 
 ---
