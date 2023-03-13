@@ -1,6 +1,7 @@
+import { resolve } from 'node:path';
+
 import reactPlugin from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-import * as path from 'node:path';
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
@@ -11,8 +12,9 @@ export default defineConfig({
     cors: true,
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+    alias: [{ find: '@', replacement: resolve(__dirname, './src') }],
+  },
+  define: {
+    'process.env': {},
   },
 });
