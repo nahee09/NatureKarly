@@ -2,32 +2,42 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   /* -------------------------------------------------------------------------- */
   overrides: [],
   // 사용환경을 최신 자바스트립트로 가정
-  'parserOptions': {
-    'ecmaVersion': 'latest'
+  parserOptions: {
+    ecmaVersion: 'latest',
   },
   /* -------------------------------------------------------------------------- */
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:import/recommended', 'plugin:import/typescript', 'plugin:react-hooks/recommended', 'plugin:jsx-a11y/recommended', 'prettier', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: ['react', 'import', 'react-hooks', 'jsx-a11y', 'html'],
+  plugins: ['react', 'import', 'react-hooks', 'jsx-a11y', 'html', 'prettier'],
   rules: {
     /* -------------------------------------------------------------------------- */
-    "import/no-unresolved": "off",
+    'import/no-unresolved': 'off',
     // var는 사용할 수 없다
     'no-var': ['error'],
     // 줄바꿈은 유닉스 스타일로 통일하겠다
@@ -61,27 +71,44 @@ module.exports = {
     // 선언하지 않은 코드를 사용할 수 없다
     'no-use-before-define': ['error'],
     // if ~ else 중첩은 허용하지 않는다
-    'max-depth': ['error', {
-      max: 1
-    }],
+    'max-depth': [
+      'error',
+      {
+        max: 1,
+      },
+    ],
     // return 문 이전에는 반드시 빈 줄이 있어야 한다
-    'padding-line-between-statements': ['error', {
-      blankLine: 'always',
-      prev: '*',
-      next: 'return'
-    }],
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+    ],
     // 삼항연산자를 허용하지 않는다
-    'no-unneeded-ternary': ['error', {
-      defaultAssignment: false
-    }],
+    'no-unneeded-ternary': [
+      'error',
+      {
+        defaultAssignment: false,
+      },
+    ],
     // 문자열 선언에는 홑따옴표를 사용한다
-    quotes: ['error', 'single', {
-      avoidEscape: true
-    }],
+    quotes: [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+      },
+    ],
     // computed property 앞뒤에는 공백이 있어야 한다.
-    'computed-property-spacing': ['error', 'never', {
-      enforceForClassMembers: true
-    }],
+    'computed-property-spacing': [
+      'error',
+      'never',
+      {
+        enforceForClassMembers: true,
+      },
+    ],
     // 중첩된 object 앞뒤에는 공백이 있어야 한다.
     'object-curly-spacing': ['error', 'always'],
     // 중첩된 배열 앞뒤에는 공백이 있으면 안된다
@@ -97,9 +124,12 @@ module.exports = {
     // alert, confirm, prompt 는 사용을 권장하지 않는다
     'no-alert': ['warn'],
     // console.log 는 사용할 수 없다
-    'no-console': ['warn', {
-      allow: ['warn', 'error']
-    }],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     // jsx에는 쌍 따옴표를 사용해야 한다.
     'jsx-quotes': ['error', 'prefer-double'],
     // 문자열 연결에는 템플릿 문자열을 사용해야 한다
@@ -112,45 +142,71 @@ module.exports = {
     'no-console': 'warn',
     'react/prop-types': 'off',
     'react/button-has-type': 'warn',
-    'react/self-closing-comp': ['warn', {
-      component: true,
-      html: false
-    }],
-    'react/jsx-sort-props': ['warn', {
-      shorthandFirst: true,
-      callbacksLast: true,
-      noSortAlphabetically: false,
-      reservedFirst: true,
-      multiline: 'last'
-    }],
-    'import/order': ['warn', {
-      groups: ['builtin', 'external', 'internal', ['sibling', 'parent', 'index'], 'type', 'unknown'],
-      pathGroups: [{
-        pattern: '{react*,react*/**}',
-        group: 'external',
-        position: 'before'
-      }, {
-        pattern: '{./**/*.module.css,./**/*.css}',
-        group: 'unknown'
-      }],
-      pathGroupsExcludedImportTypes: ['react', 'unknown'],
-      'newlines-between': 'always-and-inside-groups',
-      alphabetize: {
-        order: 'asc',
-        caseInsensitive: true
-      }
-    }],
-    'jsx-a11y/anchor-has-content': ['warn', {
-      components: ['Link']
-    }],
-    'jsx-a11y/anchor-is-valid': ['warn', {
-      components: ['Link']
-    }]
+    'react/self-closing-comp': [
+      'warn',
+      {
+        component: true,
+        html: false,
+      },
+    ],
+    'react/jsx-sort-props': [
+      'warn',
+      {
+        shorthandFirst: true,
+        callbacksLast: true,
+        noSortAlphabetically: false,
+        reservedFirst: true,
+        multiline: 'last',
+      },
+    ],
+    'import/order': [
+      'warn',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['sibling', 'parent', 'index'],
+          'type',
+          'unknown',
+        ],
+        pathGroups: [
+          {
+            pattern: '{react*,react*/**}',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: '{./**/*.module.css,./**/*.css}',
+            group: 'unknown',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react', 'unknown'],
+        'newlines-between': 'always-and-inside-groups',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+    'jsx-a11y/anchor-has-content': [
+      'warn',
+      {
+        components: ['Link'],
+      },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'warn',
+      {
+        components: ['Link'],
+      },
+    ],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
     // 'react-hooks/exhaustive-deps': [
     //   "warn",
     //   {
     //     'addionalHooks': 'useRecoilCallback'
     //   }
     // ]
-  }
+  },
 };
