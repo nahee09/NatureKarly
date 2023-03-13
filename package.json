@@ -14,8 +14,8 @@
     "format:fix": "prettier src --write",
     "hint": "htmlhint *.html -c .htmlhintrc",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "storybook dev -p 6006 -s ../public",
+    "build-storybook": "storybook build -s ../public"
   },
   "lint-staged": {
     "src/**/*.{jsx,js}": [
@@ -32,13 +32,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-vite": "^0.4.2",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/addon-essentials": "^7.0.0-rc.1",
+    "@storybook/addon-interactions": "^7.0.0-rc.1",
+    "@storybook/addon-links": "^7.0.0-rc.1",
+    "@storybook/blocks": "^7.0.0-rc.1",
+    "@storybook/react": "^7.0.0-rc.1",
+    "@storybook/react-vite": "^7.0.0-rc.1",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
@@ -58,6 +58,7 @@
     "prop-types": "^15.8.1",
     "recoil-devtools-logger": "0.4.0",
     "recoil-persist": "4.2.0",
+    "storybook": "^7.0.0-rc.1",
     "vite": "^4.1.0"
   }
 }
