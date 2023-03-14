@@ -1,11 +1,5 @@
-import Logo from '@/component/Logo/Logo';
-
 function App() {
-  return (
-    <div>
-      <Logo />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
