@@ -12,13 +12,13 @@
 }
 
 .widthLarge {
-  width: 1050px;
+  max-width: 1050px;
 }
 
 .widthMedium {
-  width: 640px;
+  max-width: 640px;
 }
 
 .widthSmall {
-  width: 340px;
+  max-width: 340px;
 }

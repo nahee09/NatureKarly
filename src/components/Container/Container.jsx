@@ -24,7 +24,7 @@ Container.defaultProps = {
   as: 'div',
   className: '',
   align: 'center',
-  width: 'widthSmall',
+  width: 'widthLarge',
 };
 
 Container.propTypes = {
