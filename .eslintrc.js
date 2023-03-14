@@ -11,10 +11,6 @@ module.exports = {
   },
   /* -------------------------------------------------------------------------- */
   overrides: [],
-  // 사용환경을 최신 자바스트립트로 가정
-  parserOptions: {
-    ecmaVersion: 'latest',
-  },
   /* -------------------------------------------------------------------------- */
   extends: [
     'eslint:recommended',
@@ -40,8 +36,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     // var는 사용할 수 없다
     'no-var': ['error'],
-    // 줄바꿈은 유닉스 스타일로 통일하겠다
-    'linebreak-style': ['error', 'unix'],
+    // 줄바꿈은 경고하지 않는다.
+    'linebreak-style': 0,
     // Function.prototype.apply() 를 사용할 때는 spread 연산자를 사용해야 한다
     'prefer-spread': ['error'],
     // 선언한 표현식은 반드시 사용해야 한다
@@ -139,7 +135,6 @@ module.exports = {
     /* -------------------------------------------------------------------------- */
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'no-console': 'warn',
     'react/prop-types': 'off',
     'react/button-has-type': 'warn',
     'react/self-closing-comp': [
