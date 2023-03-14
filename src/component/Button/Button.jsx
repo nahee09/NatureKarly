@@ -1,56 +1,30 @@
 import PropTypes from 'prop-types';
 
-import { useTheme } from '../../theme/ThemeContext';
-import { getColor } from '../../theme/utils';
-
-// import { getColor } from '@/theme/utils';
-// import { useTheme } from '@/theme/ThemeContext';
-
 import classes from './Button.module.css';
 
-function getClassName(isSecondary, disabled) {
-  let buttonStyle = {};
+function calIsSecondary(isSecondary) {
+  if (isSecondary) return 'secondary';
 
-  if (!disabled) {
-    buttonStyle = {
-      backgroundColor: !isSecondary
-        ? getColor('primary/400')
-        : getColor('white'),
-      color: !isSecondary ? getColor('white') : getColor('primary/400'),
-    };
-  } else {
-    buttonStyle = {
-      backgroundColor: !isSecondary
-        ? getColor('primary/50')
-        : getColor('gray/50'),
-      color: !isSecondary ? getColor('primary/400') : getColor('gray/300'),
-    };
-  }
-
-  return buttonStyle;
+  return 'primary';
 }
-
-export function Button({ secondary: isSecondary, disabled, ...restProps }) {
-  const theme = useTheme();
-  console.log('theme', theme);
-
+export function Button({ isSecondary, children, ...restProps }) {
   return (
     <button
-      className={classes.Button}
-      disabled={disabled}
-      style={getClassName(isSecondary, disabled)}
       type="button"
+      className={[classes.Button, classes[calIsSecondary(isSecondary)]].join(
+        ' '
+      )}
       {...restProps}
-    />
+    >
+      {children}
+    </button>
   );
 }
 
 Button.defaultProps = {
-  secondary: false,
-  disabled: false,
+  isSecondary: false,
 };
 
 Button.propTypes = {
-  secondary: PropTypes.bool,
-  disabled: PropTypes.bool,
+  isSecondary: PropTypes.bool,
 };
