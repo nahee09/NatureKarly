@@ -1,7 +1,3 @@
-.Input {
-  margin: 30px;
-}
-
 .Input[type='tel'],
 .Input[type='text'],
 .Input[type='email'],
@@ -11,31 +7,30 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1rem;
-  border: 1px solid #a6a6a6;
-  color: #898989;
+  font-size: var(--font-md);
+  border: 1px solid var(--color-gray-300);
+  color: var(--color-gray-400);
   font-weight: 400;
-  line-height: 160%;
-  border-radius: 0.25rem;
+  line-height: var(--line-height-lg);
+  border-radius: var(--border-radius-default);
   padding: 0.75rem 1.25rem;
-  margin: 30px;
 }
 
 .Input[type='tel']:focus,
 .Input[type='text']:focus,
 .Input[type='email']:focus,
 .Input[type='password']:focus {
-  border: 1px solid #000;
+  border: 1px solid var(--color-black);
 }
 
 .Input[type='search'] {
-  font-size: 1.333125rem;
+  font-size: var(--font-lg);
   padding-right: 3.5rem;
-  border-color: #509450;
+  border-color: var(--color-primary);
 }
 
 .Input[type='search']:focus {
-  border-color: #0066ff;
+  border-color: var(--color-blue);
 }
 
 .Input[type='search']::-webkit-search-cancel-button {
@@ -50,14 +45,14 @@
 .Input[type='checkbox'] {
   vertical-align: middle;
   appearance: none;
-  border: max(2px, 0.1em) solid #c4c4c4;
+  border: max(2px, 0.1em) solid var(--color-gray-200);
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .Input[type='radio']:checked {
-  border: 0.45rem solid #509450;
+  border: 0.45rem solid var(--color-primary);
 }
 
 .Input[type='checkbox']:checked {
