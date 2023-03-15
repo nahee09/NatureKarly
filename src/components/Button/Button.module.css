@@ -1,6 +1,6 @@
 .Button {
   display: flex;
-  box-sizing:border-box;
+  box-sizing: border-box;
   user-select: none;
   cursor: pointer;
   background: 0;

@@ -1,0 +1,13 @@
+.IconComponent {
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.IconComponent[data-image='react'] {
+  background-image: url(../../assets/Icon/Facebook.svg);
+}
+
+.IconComponent[data-image='react'] {
+  background-image: url(../../assets/Icon/Facebook.svg);
+}
