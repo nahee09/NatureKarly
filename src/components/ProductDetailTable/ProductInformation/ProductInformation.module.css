@@ -2,4 +2,10 @@
   display: flex;
   flex-flow: row wrap;
   border-top: 1px solid var(--color-gray-100);
+  padding: 16px 0;
+}
+
+.ProductInformation > p {
+  width: 128px;
+  line-height: 26px;
 }

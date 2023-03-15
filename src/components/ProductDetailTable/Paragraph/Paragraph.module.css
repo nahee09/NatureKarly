@@ -9,4 +9,11 @@
   font-size: var(--font-sm);
   font-weight: 600;
   white-space: pre-wrap;
+  margin-top: 4px;
+}
+
+.ParagraphGrayNormal {
+  color: var(--color-gray-500);
+  font-size: var(--font-sm);
+  font-weight: 400;
 }
