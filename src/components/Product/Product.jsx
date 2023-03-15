@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { SwiperSlide } from 'swiper/react';
 
+import thumb from '../../assets/jukkumi/thumbnail.jpg';
 import { A11yHidden } from '../A11yHidden/A11yHidden';
 
 import classes from './Product.module.css';
@@ -34,7 +35,7 @@ export function Product({ isSwiper, isSale }) {
     return (
       <SwiperSlide>
         <div className={classes.productImg}>
-          <img alt="" src="" />
+          <img alt="쭈꾸미" src={thumb} />
           {/* 장바구니 아이콘 */}
         </div>
         <ul className={classes.productInfo}>
@@ -48,7 +49,7 @@ export function Product({ isSwiper, isSale }) {
   return (
     <>
       <div className={classes.productImg}>
-        <img alt="" src="" />
+        <img alt="쭈꾸미" src={thumb} />
         {/* 장바구니 아이콘 */}
       </div>
       <ul className={classes.productInfo}>
