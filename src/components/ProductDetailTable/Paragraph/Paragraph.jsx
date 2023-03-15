@@ -7,3 +7,7 @@ export const ParagraphGray = function ({ children }) {
 export const ParagraphGrayLight = function ({ children }) {
   return <p className={classes.ParagraphGrayLight}>{children}</p>;
 };
+
+export const ParagraphGrayNormal = function ({ children }) {
+  return <p className={classes.ParagraphGrayNormal}>{children}</p>;
+};
