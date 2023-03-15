@@ -1,62 +1,49 @@
-
 .nav{
-  width: 1050px;
-  height: 72px;
+  /* width: 1050px; */
+  height: 4.5rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: var(--font-md);
+  font-weight: 600;
 }
 
-.nav-category{
-  display: flex;
-  width: 10%;
-}
-
-.nav-category::before{
-  content: "";
-  background-image: url('../../assets/Hamburger.svg');
-  background-repeat: no-repeat;
-  background-position: 0;
-  background-size: 14px 16px;
-  display: inline-block;
-  width: 16px;
-  height: 24px;
-  margin-right: 12px;
-}
-
-.nav-menu{
+.navMenu{
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 60%;
 }
 
-.nav-menu li{
+.navMenu li{
   margin: 0 auto;
 }
 
-.nav-menu a{
+.navMenu a{
   text-decoration: none;
-  color: #333;
+  color: var(--color-content);
 }
 
-.nav-menu a:hover{
+.navMenu a:hover{
   text-decoration: underline;
-  color: #509450;
+  color: var(--color-primary);
 }
 
-.nav-side{
-  width: 15%;
-  height: 27px;
-  line-height: 27px;
+.navSide{
+  width: 13%;
+  height: 1.6875rem;
+  line-height: 1.6875rem;
   text-align: center;
   text-decoration: none;
-  color: #333;
-  border: 1px solid #A6A6A6;
-  border-radius: 16px;
+  color: var(--color-content);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.nav-side span:first-child{
-  color: #509450;
+.navSide span:first-child{
+  color: var(--color-primary);
 }
+

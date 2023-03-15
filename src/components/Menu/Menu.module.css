@@ -1,0 +1,20 @@
+.menu{
+  display: flex;
+  width: 10%;
+}
+
+.menu::before{
+  content: "";
+  background-image: url('../../assets/Hamburger.svg');
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 0.875rem 1rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.menu:hover{
+  color: var(--color-primary);
+}
