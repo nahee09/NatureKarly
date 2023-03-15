@@ -1,9 +1,12 @@
-.ProductInformation {
+.ParagraphGray {
   color: var(--color-gray-500);
   font-size: var(--font-sm);
   font-weight: 600;
 }
 
-.ProductInformationLight {
+.ParagraphGrayLight {
   color: var(--color-gray-400);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  white-space: pre-wrap;
 }
