@@ -14,6 +14,7 @@ export const DefaultLabel = {
     invisibleLabel: false,
   },
 };
+DefaultLabel.storyName = '선택 Label';
 
 export const EssentialLabel = {
   args: {
@@ -22,3 +23,4 @@ export const EssentialLabel = {
     invisibleLabel: false,
   },
 };
+EssentialLabel.storyName = '필수 Label';

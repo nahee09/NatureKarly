@@ -9,7 +9,7 @@
   content: '';
   position: relative;
   top: -10px;
-  background: url(../../assets/icons/Icon/sign/required.svg) no-repeat center;
+  background: url(@/assets/icons/Icon/sign/required.svg) no-repeat center;
   display: inline-block;
   width: 0.5625rem;
   height: 0.4375rem;
