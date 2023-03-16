@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -11,7 +13,9 @@
   font-weight: 600;
 }
 
-.Title, .Content, .AllergyContent {
+.Title,
+.Content,
+.AllergyContent {
   color: var(--color-gray-500);
 }
 
