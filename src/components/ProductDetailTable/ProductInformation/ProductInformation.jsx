@@ -1,9 +1,3 @@
-import {
-  ParagraphGray,
-  ParagraphGrayLight,
-  ParagraphGrayNormal,
-} from '../Paragraph/Paragraph';
-
 import classes from './ProductInformation.module.css';
 
 const ProductInformation = function ({
@@ -14,11 +8,11 @@ const ProductInformation = function ({
 }) {
   return (
     <div className={classes.ProductInformation}>
-      <ParagraphGray>{title}</ParagraphGray>
+      <p className={classes.Title}>{title}</p>
       <div>
-        <ParagraphGray>{content}</ParagraphGray>
-        <ParagraphGrayLight>{subcontent}</ParagraphGrayLight>
-        <ParagraphGrayNormal>{allergycontent}</ParagraphGrayNormal>
+        <p className={classes.Content}>{content}</p>
+        <p className={classes.SubContent}>{subcontent}</p>
+        <p className={classes.AllergyContent}>{allergycontent}</p>
       </div>
     </div>
   );
