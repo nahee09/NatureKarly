@@ -19,7 +19,7 @@ export function BaseLayout({ className, children, ...restProps }) {
   return (
     <div className={combineClassNames} {...restProps}>
       <Container>
-        <Header logoLabel="Karly" navList={navList} />
+        <Header navList={navList} />
         <main>{children}</main>
       </Container>
     </div>
