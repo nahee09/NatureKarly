@@ -1,10 +1,9 @@
 import { Button } from '@/components/Button/Button';
-import { Navigation } from '@/components/Nav/Nav';
-
+import { Menu } from '@/components/Menu/Menu';
 function App() {
   return (
     <div>
-      <Navigation></Navigation>
+      <Menu />
       <Button type="submit">회원가입</Button>
       <Button type="reset">삭제</Button>
     </div>

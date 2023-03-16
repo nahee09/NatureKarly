@@ -48,9 +48,3 @@
   --border-radius-default: 0.25rem;
   --border-radius-md: 1rem;
 }
-
-  /* ------------------------------ border-radius ----------------------------- */
-  --border-radius-none: 0;
-  --border-radius-default: 0.25rem;
-  --border-radius-md: 1rem;
-}
