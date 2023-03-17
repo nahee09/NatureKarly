@@ -1,0 +1,10 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.Inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}

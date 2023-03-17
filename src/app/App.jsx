@@ -1,12 +1,14 @@
-import { Button } from '@/components/Button/Button';
+import ProductDetailTable from '@/components/ProductDetailTable/ProductDetailTable';
 
 function App() {
   return (
-    <div>
-      <h1>React 앱</h1>
-      <Button>네네네</Button>
-      <Button isSecondary={true}>삭제</Button>
-    </div>
+    <>
+      <ProductDetailTable
+        description={'튀기지 않아 부담 없는 매콤함'}
+        name={'[풀무원] 탱탱쫄면 (4개입)'}
+        price={'4,980'}
+      />
+    </>
   );
 }
 
