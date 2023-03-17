@@ -38,7 +38,7 @@
   -webkit-appearance: none;
   width: 1rem;
   height: 1rem;
-  background: url(../../assets/search-close.svg) center center no-repeat;
+  background: url(@/assets/icons/Input/search-close.svg) center center no-repeat;
   cursor: pointer;
 }
 
