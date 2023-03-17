@@ -42,8 +42,8 @@ export const SavingTag2 = {
   args: {
     tagType: 'savingTag',
     borderRadius: 'borderRadiusMedium',
-    padding: '4px 8px',
-    fontSize: '10px',
+    padding: '0.25rem 0.5rem',
+    fontSize: '0.625rem',
     children: '적립',
   },
 };
