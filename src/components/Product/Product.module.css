@@ -1,0 +1,54 @@
+.productImg {
+  margin-bottom: 1rem;
+}
+
+.productInfo li {
+  margin-bottom: 0.5rem;
+}
+
+.delivery {
+  font-weight: 600;
+  font-size: var(--font-sm);
+  color: var(--color-gray-400);
+  line-height: var(--line-height-md);
+}
+
+.name {
+  font-weight: 400;
+  font-size: var(--font-md);
+  line-height: var(--line-height-lg);
+  color: var(--color-content);
+}
+
+.discountRate {
+  display: inline-block;
+  font-weight: 600;
+  font-size: var(--font-lg);
+  line-height: var(--line-height-md);
+  color: var(--color-accent);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.salePrice {
+  display: inline-block;
+  font-weight: 600;
+  font-size: var(--font-lg);
+  line-height: var(--line-height-md);
+  color: var(--color-content);
+}
+
+.price {
+  font-weight: 400;
+  font-size: var(--font-sm);
+  color: var(--color-gray-400);
+  line-height: var(--line-height-lg);
+  text-decoration: line-through;
+}
+
+.summary {
+  font-weight: 400;
+  font-size: var(--font-sm);
+  color: var(--color-gray-400);
+  line-height: var(--line-height-lg);
+}
