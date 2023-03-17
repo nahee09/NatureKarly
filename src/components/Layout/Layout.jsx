@@ -2,7 +2,7 @@ import { node, string } from 'prop-types';
 
 import classes from './Layout.module.css';
 
-import { Header, Container } from '@/components';
+import { Header } from '@/components';
 
 import { getPathFromBaseUrl as baseURL } from '@/utils';
 
@@ -18,10 +18,8 @@ export function BaseLayout({ className, children, ...restProps }) {
 
   return (
     <div className={combineClassNames} {...restProps}>
-      <Container>
-        <Header navList={navList} />
-        <main>{children}</main>
-      </Container>
+      <Header navList={navList} />
+      <main>{children}</main>
     </div>
   );
 }
