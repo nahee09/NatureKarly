@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 import classes from './Input.module.css';
 
-export function Input({ type, ...restProps }) {
-  return <input className={classes.input} type={type} {...restProps} />;
+export function Input({ id, type, ...restProps }) {
+  return <input className={classes.input} id={id} type={type} {...restProps} />;
 }
 
 /* Props -------------------------------------------------------------------- */
