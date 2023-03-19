@@ -1,0 +1,26 @@
+.pageMoveButtons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pageMoveButtons button {
+  padding: 0;
+}
+
+.previousButton,
+.nextButton {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--border-radius-default);
+  background-color: transparent;
+}
+
+.previousButton {
+  transform: rotate(90deg);
+  margin-right: 1rem;
+}
+
+.nextButton {
+  transform: rotate(-90deg);
+}
