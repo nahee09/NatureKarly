@@ -1,8 +1,8 @@
 import { node, string } from 'prop-types';
 
-import classes from './Layout.module.css';
+import Header from '../Header/Header';
 
-import { Header } from '@/components';
+import classes from './Layout.module.css';
 
 import { getPathFromBaseUrl as baseURL } from '@/utils';
 

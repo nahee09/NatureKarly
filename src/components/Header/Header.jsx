@@ -6,9 +6,12 @@ import Logo from '../Logo/Logo';
 
 import classes from './Header.module.css';
 
-import { Container, Navigation, Button, Input } from '@/components';
+import { Container, Navigation, Input, Label, A11yHidden } from '@/components';
+import { IconComponent } from '@/components';
 
-export function Header({ navList: initialNavList }) {
+import location from '@/assets/icons/Icon/header/location.svg';
+import heart from '@/assets/icons/Icon/header/heart.svg';
+export default function Header({ navList: initialNavList }) {
   const [navList] = useState(initialNavList);
 
   return (
@@ -38,8 +41,22 @@ export function Header({ navList: initialNavList }) {
               <span aria-hidden="true">|</span>
               <a href="#">뷰티칼리</a>
             </div>
-            <Input type={'search'} placeholder="검색어를 입력해주세요" />
-            
+            <form action="" className={classes.headerSearchForm}>
+              <fieldset>
+                <A11yHidden>검색 폼</A11yHidden>
+                <Label htmlFor="검색" invisibleLabel={true}></Label>
+                <Input type="search" placeholder="검색어를 입력해주세요" />
+              </fieldset>
+            </form>
+            <ul className={classes.headerIconList}>
+              <li>
+                <IconComponent><img src={location} alt="배송지" /></IconComponent>
+              </li>
+              <li>
+                <IconComponent><img src={heart} alt="관심상품" /></IconComponent>
+              </li>
+              <li></li>
+            </ul>
           </div>
         </div>
         <Navigation headline="네비게이션" list={navList} />
