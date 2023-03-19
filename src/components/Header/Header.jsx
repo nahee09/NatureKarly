@@ -11,6 +11,9 @@ import { IconComponent } from '@/components';
 
 import location from '@/assets/icons/Icon/header/location.svg';
 import heart from '@/assets/icons/Icon/header/heart.svg';
+import cart from '@/assets/icons/Icon/header/Cart.svg';
+import down from '@/assets/icons/Icon/header/iconDown1.svg';
+import search from '@/assets/icons/Icon/header/Search.svg';
 export default function Header({ navList: initialNavList }) {
   const [navList] = useState(initialNavList);
 
@@ -30,13 +33,13 @@ export default function Header({ navList: initialNavList }) {
             <li>
               <a href="#">
                 고객센터
-                <img src="" alt="" />
+                <img src={down} alt="아래화살표" />
               </a>
             </li>
           </ul>
           <div className={classes.headerSearch}>
-            <Logo />
             <div className={classes.headerSwitch}>
+              <Logo />
               <a href="#">마켓칼리</a>
               <span aria-hidden="true">|</span>
               <a href="#">뷰티칼리</a>
@@ -47,15 +50,32 @@ export default function Header({ navList: initialNavList }) {
                 <Label htmlFor="검색" invisibleLabel={true}></Label>
                 <Input type="search" placeholder="검색어를 입력해주세요" />
               </fieldset>
+              <IconComponent>
+                <img src={search} alt="검색아이콘" />
+              </IconComponent>
             </form>
             <ul className={classes.headerIconList}>
               <li>
-                <IconComponent><img src={location} alt="배송지" /></IconComponent>
+                <IconComponent>
+                  <a href="#">
+                    <img src={location} alt="배송지" />
+                  </a>
+                </IconComponent>
               </li>
               <li>
-                <IconComponent><img src={heart} alt="관심상품" /></IconComponent>
+                <IconComponent>
+                  <a href="#">
+                    <img src={heart} alt="관심상품" />
+                  </a>
+                </IconComponent>
               </li>
-              <li></li>
+              <li>
+                <IconComponent>
+                  <a href="#">
+                    <img src={cart} alt="장바구니" />
+                  </a>
+                </IconComponent>
+              </li>
             </ul>
           </div>
         </div>
