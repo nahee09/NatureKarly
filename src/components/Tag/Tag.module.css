@@ -2,7 +2,6 @@
   background-color: var(--color-secondary);
   color: var(--color-white);
   font-size: var(--font-sm);
-  width: 3rem;
   height: 1.125rem;
   font-weight: 600;
 }
@@ -12,6 +11,7 @@
   color: var(--color-secondary);
   font-size: var(--font-sm);
   border: 1px solid var(--color-secondary);
+  height: 1.125rem;
   font-weight: 600;
 }
 
@@ -19,6 +19,7 @@
   background-color: var(--color-gray-100);
   color: var(--color-content);
   font-size: var(--font-sm);
+  height: 1.125rem;
   font-weight: 600;
 }
 
@@ -26,6 +27,7 @@
   background-color: var(--color-accent);
   color: var(--color-white);
   font-size: var(--font-sm);
+  height: 1.125rem;
   font-weight: 400;
 }
 
