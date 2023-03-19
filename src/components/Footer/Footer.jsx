@@ -2,7 +2,17 @@ import classes from './Footer.module.css';
 
 import { Container, IconComponent } from '@/components';
 
+import blog from '@/assets/icons/Icon/footer/Blog.svg';
+import faceBook from '@/assets/icons/Icon/footer/faceBook.svg';
+import instagram from '@/assets/icons/Icon/footer/instagram.svg';
+import youtube from '@/assets/icons/Icon/footer/youtube.svg';
+import naverPost from '@/assets/icons/Icon/footer/naverPost.svg';
 
+
+import isms from '@/assets/icons/Icon/footer/logo_isms.svg';
+import privacy from '@/assets/icons/Icon/footer/logo_privacy.svg';
+import tosspayments from '@/assets/icons/Icon/footer/logo_tosspayments.svg';
+import wooriBank from '@/assets/icons/Icon/footer/logo_wooriBank.svg';
 
 
 export default function Footer() {
@@ -64,27 +74,27 @@ export default function Footer() {
           <ul>
             <li>
               <IconComponent>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><img src={blog} alt="블로그" /></a>
               </IconComponent>
             </li>
             <li>
               <IconComponent>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><img src={faceBook} alt="페이스북" /></a>
               </IconComponent>
             </li>
             <li>
               <IconComponent>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><img src={instagram} alt="인스타그램" /></a>
               </IconComponent>
             </li>
             <li>
               <IconComponent>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><img src={naverPost} alt="네이버포스트" /></a>
               </IconComponent>
             </li>
             <li>
               <IconComponent>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><img src={youtube} alt="유튜브" /></a>
               </IconComponent>
             </li>
           </ul>
@@ -93,7 +103,7 @@ export default function Footer() {
         <ul>
           <li>
             <IconComponent>
-              <img src="" alt="" />
+              <img src={isms} alt="정보보호관리체계" />
             </IconComponent>
             <div>
               <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 운영</p>
@@ -103,7 +113,7 @@ export default function Footer() {
           </li>
           <li>
             <IconComponent>
-              <img src="" alt="" />
+              <img src={privacy} alt="개인정보보호" />
             </IconComponent>
             <div>
               <p>개인정보보호 우수 웹사이트</p>
@@ -112,13 +122,13 @@ export default function Footer() {
           </li>
           <li>
             <IconComponent>
-              <img src="" alt="" />
+              <img src={tosspayments} alt="토스페이먼츠" />
             </IconComponent>
             <p>토스페이먼츠 구매안전(에스크로) 서비스<br/>를 이용하실 수 있습니다.</p>
           </li>
           <li>
             <IconComponent>
-              <img src="" alt="" />
+              <img src={wooriBank} alt="우리은행" />
             </IconComponent>
             <p>고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보<br/>증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
           </li>
