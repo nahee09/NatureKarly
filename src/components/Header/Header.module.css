@@ -10,7 +10,7 @@
 
 .topMenu a{
   text-decoration: none;
-  color: black;
+  color: var(--color-content);
   padding: 0 0.625rem;  
 }
 
@@ -25,7 +25,6 @@
 
 
 .headerSearch{
-  /* background-color: lightcoral; */
   display: flex;
 }
 
@@ -33,7 +32,6 @@
   display: flex;
   padding-right: 3.125rem;
   width: 30%;
-  /* background-color: yellow; */
   font-size: 1.25rem;
   align-items: center;
   justify-content: center;
@@ -42,13 +40,11 @@
 .headerSwitch a{
   padding: 0 0.625rem;
   text-decoration: none;
-  color: black;
-  /* background-color: aquamarine; */
+  color: var(--color-content);
 }
 
 .headerSearchForm{
   width: 50%;
-  /* background-color: brown; */
   display: flex;
   align-items: center;
 }
@@ -60,15 +56,13 @@
 
 .headerIconList{
   width: 20%;
-  /* background-color: blue; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .headerIconList li{
-  /* background-color: violet; */
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .headerIconList li {
