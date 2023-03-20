@@ -1,0 +1,40 @@
+.popUpTitle {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.popUpTitle > h3 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 1.25rem;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: brightness(40%);
+}
+
+.popUpProduct {
+  padding: 1rem 0;
+  display: flex;
+  height: 6.5rem;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.thumnail {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.popUpProduct > h4 {
+  font-size: var(--font-md);
+  font-weight: 600;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
