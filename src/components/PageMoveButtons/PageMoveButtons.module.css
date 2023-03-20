@@ -4,7 +4,13 @@
 }
 
 .pageMoveButtons button {
+  overflow: hidden;
   padding: 0;
+}
+
+.pageMoveButtons [data-image='Direction=Down'] {
+  filter: sepia(80%) hue-rotate(120deg) brightness(85%);
+  transform: scale(200%, 200%);
 }
 
 .previousButton,
