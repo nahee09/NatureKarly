@@ -1,0 +1,30 @@
+.CartTableCheckbox {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.CartTableCheckbox:last-child {
+  border: 0;
+}
+
+.CartTableCheckbox button::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: var(--color-content);
+}
+
+.CartTableListItem {
+  padding: 16px 9px 16px 42px;
+  border-bottom: 1px solid var(--color-black);
+  line-height: var(--line-height-md);
+  display: flex;
+  justify-content: space-between;
+}
+
+.ListArrow {
+  line-height: var(--line-height-md);
+  vertical-align: middle;
+}
+
