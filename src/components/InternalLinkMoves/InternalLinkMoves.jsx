@@ -9,7 +9,11 @@ export function InternalLinkMoves({ ...restProps }) {
         <h3>상세 메뉴 리스트</h3>
       </A11yHidden>
       <ul className={classes.detailMenuList} {...restProps}>
-        <InternalLinkMove name="상품설명" to="#productDescription" />
+        <InternalLinkMove
+          className={classes.isClicked}
+          name="상품설명"
+          to="#productDescription"
+        />
         <InternalLinkMove name="상세정보" to="#productDetail" />
         <InternalLinkMove
           isNumberOption={true}
