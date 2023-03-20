@@ -1,0 +1,115 @@
+.OrdererTable {
+  width: 284px;
+  flex-shrink: 0;
+  margin-bottom: 80px;
+}
+
+.BoxDesign {
+  padding: 20px;
+  border: 1px solid var(--color-gray-100);
+}
+
+.BoxDesign h4,
+.Address {
+  color: var(--color-black);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.BoxDesign h4 {
+  padding-left: 36px;
+}
+
+.Address {
+  width: 246px;
+  margin-top: 12px;
+}
+
+.DeliveryType {
+  color: var(--color-primary);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+  margin-top: 12px;
+}
+
+.AddressChangeButton {
+  margin-top: 12px;
+}
+
+.PriceTable {
+  background-color: var(--color-gray-50);
+}
+
+.PriceTable li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: var(--color-content);
+  font-size: var(--font-md);
+  font-weight: 400;
+  line-height: var(--line-height-lg);
+  margin-bottom: 16px;
+}
+
+.PriceTable li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed var(--color-gray-100);
+}
+
+.PriceTable li span {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.TotalPrice {
+  color: var(--color-content);
+  font-size: var(--font-md);
+  font-weight: 400;
+  line-height: var(--line-height-lg);
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.TotalPrice span {
+  margin-left: auto;
+}
+
+.TotalPrice span:first-child {
+  color: var(--color-black);
+  font-size: var(--font-xl);
+  font-weight: 700;
+  line-height: var(--line-height-sm);
+}
+
+.TotalPrice span:last-child {
+  color: var(--color-black);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+  margin-left: 4px;
+}
+
+.PointGuide {
+  text-align: right;
+  color: var(--color-content);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+  margin-top: 11px;
+}
+
+.OrdererTable > button {
+  margin: 16px 0;
+}
+
+.OrderInformaiton {
+  color: var(--color-gray-400);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
