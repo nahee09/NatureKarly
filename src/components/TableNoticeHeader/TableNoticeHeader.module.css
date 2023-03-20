@@ -6,6 +6,15 @@
   display: flex;
 }
 
+.secretTitle {
+  color: var(--color-gray-400);
+  font-weight: 600;
+  font-size: var(--font-md);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .tag {
   margin-right: 1.25rem;
   display: flex;

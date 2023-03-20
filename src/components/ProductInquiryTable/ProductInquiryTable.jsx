@@ -28,6 +28,11 @@ export function ProductInquiryTable() {
         <NormalNoticeContent />
         <InquiryTitle />
         <InquiryContent />
+        <TableNoticeHeader
+          additional={true}
+          isNoticeTag={false}
+          isSecret={true}
+        />
       </tbody>
     </>
   );

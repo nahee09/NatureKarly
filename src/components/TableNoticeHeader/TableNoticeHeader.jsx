@@ -1,10 +1,15 @@
 import { bool, string } from 'prop-types';
 
-import { Tag } from '..';
+import { IconComponent, Tag } from '..';
 
 import classes from './TableNoticeHeader.module.css';
 
-export function TableNoticeHeader({ additional, noticeTitle, isNoticeTag }) {
+export function TableNoticeHeader({
+  additional,
+  noticeTitle,
+  isNoticeTag,
+  isSecret,
+}) {
   function addColumn(additional) {
     if (additional) {
       return (
@@ -29,12 +34,25 @@ export function TableNoticeHeader({ additional, noticeTitle, isNoticeTag }) {
     }
   }
 
+  function addSecretTitle(isSecret) {
+    if (isSecret) {
+      return (
+        <span className={classes.secretTitle}>
+          비밀글입니다.
+          <IconComponent data-image="lock" />
+        </span>
+      );
+    }
+
+    return <>{noticeTitle}</>;
+  }
+
   return (
     <tr className={classes.colSpanCell}>
       <td colSpan={additional ? null : 4}>
         <button className={classes.title} type="button">
           {addNoticeTag(isNoticeTag)}
-          {noticeTitle}
+          {addSecretTitle(isSecret)}
         </button>
       </td>
       {addColumn(additional)}
@@ -46,10 +64,12 @@ TableNoticeHeader.defaultProps = {
   additional: false,
   noticeTitle: '제목을 입력하세요.',
   isNoticeTag: true,
+  isSecret: false,
 };
 
 TableNoticeHeader.propTypes = {
   additional: bool,
   noticeTitle: string,
   isNoticeTag: bool,
+  isSecret: bool,
 };

@@ -20,3 +20,7 @@ export const Additional = {
 export const IsNotNoticeTag = {
   args: { isNoticeTag: false, noticeTitle: '팩이 터져서 왔어요' },
 };
+
+export const IsSecret = {
+  args: { isSecret: true, isNoticeTag: false, additional: true },
+};
