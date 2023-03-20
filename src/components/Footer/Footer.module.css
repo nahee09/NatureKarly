@@ -1,13 +1,13 @@
 .footerInner{
   display: flex;
   justify-content: space-between;
-  padding-top: 28px;
+  padding-top: 1.75rem;
 }
 
 /* customerService 섹션 */
 
 .customerService{
-  height: 357px;
+  height: 22.3125rem;
 }
 
 .customerService h2{
@@ -45,21 +45,21 @@
 
 .inquiry li button{
   color: black;
-  height: 40px;
-  width: 140px;
+  height: 2.5rem;
+  width: 8.75rem;
   border: 1px solid var(--color-gray-200);
   background-color: transparent;
 }
 
 .customerService span{
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
 .customerService a{
   text-decoration: none;
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
@@ -75,7 +75,7 @@
 .about .footerNavigation{
   display: flex;
   gap: 0.85rem;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 160%;
@@ -86,7 +86,7 @@
 }
 
 .about p{
-  height: 19px;
+  height: 1.1875rem;
 }
 
 .about a{
@@ -109,7 +109,7 @@
 .aboutMiddleList{
   display: flex;
   border-top: 1px solid var(--color-gray-100);
-  padding-top: 1.5rem;
+  padding: 1.5rem 0 2rem;
   align-items: flex-start;
   justify-content: space-between;
   font-size: 0.625rem;
@@ -121,5 +121,18 @@
 
 
 .aboutMiddleList div:first-child{
-  margin-right: 8px;
+  margin-right: 0.5rem;
+}
+
+
+.footerBottom{
+  background-color: var(--color-gray-50);
+  font-size: .625rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 160%;
+  padding: 1.25rem .25rem 2rem;
+  height: 3.5rem;
 }
