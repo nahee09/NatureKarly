@@ -12,3 +12,7 @@ export default {
 export const Default = {
   args: {},
 };
+
+export const IsNumberOption = {
+  args: { isNumberOption: true },
+};
