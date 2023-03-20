@@ -1,0 +1,79 @@
+.productForm {
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--color-gray-100);
+  padding-bottom: 3.625rem;
+}
+
+.productForm h4 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.productForm label {
+  font-weight: 600;
+  width: 6.25rem;
+  padding: 0.5rem;
+}
+
+.productForm p {
+  display: flex;
+  position: relative;
+}
+
+.formInput {
+  width: 100%;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-default);
+  padding: 0.5625rem 0 0.5625rem 1.25rem;
+}
+
+.numberOfCharacter {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  background-color: var(--color-white);
+}
+
+.formText {
+  width: 100%;
+  height: 12.375rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-default);
+  resize: none;
+  color: var(--color-gray-500);
+  padding: 1rem 0 0 1rem;
+}
+
+.formText:focus,
+.formInput:focus {
+  outline: 1px solid var(--color-black);
+}
+
+.formText::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.formText::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-gray-200);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+.formText::-webkit-scrollbar-track {
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-50);
+}
+
+.numberOfCharacter {
+  color: var(--color-gray-500);
+}
+
+.checkSecret {
+  margin-left: 6.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: -2.25rem;
+  font-size: var(--font-sm);
+  font-weight: 400;
+}
