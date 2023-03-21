@@ -1,7 +1,5 @@
 import { node, string } from 'prop-types';
 
-import Footer from '../Footer/Footer';
-
 import Header from '../Header/Header';
 
 import classes from './Layout.module.css';
@@ -22,7 +20,6 @@ export function BaseLayout({ className, children, ...restProps }) {
     <div className={combineClassNames} {...restProps}>
       <Header navList={navList} />
       <main>{children}</main>
-      <Footer />
     </div>
   );
 }
