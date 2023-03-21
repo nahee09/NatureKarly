@@ -2,7 +2,14 @@ import { bool, string } from 'prop-types';
 
 import classes from './InternalLinkMove.module.css';
 
-export function InternalLinkMove({ name, to, isNumberOption, className }) {
+export function InternalLinkMove({
+  name,
+  to,
+  isNumberOption,
+  id,
+  className,
+  ...restProps
+}) {
   function putNumberOption(isNumberOption) {
     if (isNumberOption) {
       return <span>{'(1,000)'}</span>;
@@ -10,7 +17,7 @@ export function InternalLinkMove({ name, to, isNumberOption, className }) {
   }
 
   return (
-    <li className={classes.internalLinkMove}>
+    <li key={id} className={classes.internalLinkMove} {...restProps}>
       <a className={className} href={to}>
         {name}
         {putNumberOption(isNumberOption)}
@@ -20,15 +27,17 @@ export function InternalLinkMove({ name, to, isNumberOption, className }) {
 }
 
 InternalLinkMove.defaultProps = {
+  id: '',
   name: '리스트명',
   to: '',
-  inNumberOption: false,
+  isNumberOption: false,
   className: '',
 };
 
 InternalLinkMove.propTypes = {
+  id: string,
   name: string,
   to: string,
-  inNumberOption: bool,
+  isNumberOption: bool,
   className: string,
 };
