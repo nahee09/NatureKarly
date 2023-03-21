@@ -1,5 +1,10 @@
 .productImg {
+  position: relative;
   margin-bottom: 1rem;
+}
+
+.productInfo {
+  margin-bottom: 5.6875rem;
 }
 
 .productInfo li {
@@ -51,4 +56,11 @@
   font-size: var(--font-sm);
   color: var(--color-gray-400);
   line-height: var(--line-height-lg);
+}
+
+.cart {
+  position: absolute;
+  right: 0.9375rem;
+  bottom: 1.0625rem;
+  cursor: pointer;
 }
