@@ -5,9 +5,10 @@ const ProductInformation = function ({
   content,
   subcontent,
   allergycontent,
+  ...restProps
 }) {
   return (
-    <dl className={classes.ProductInformation}>
+    <dl className={classes.ProductInformation} {...restProps}>
       <dt className={classes.Title}>{title}</dt>
       <dd>
         <p className={classes.Content}>{content}</p>
