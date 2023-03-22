@@ -115,7 +115,8 @@
   position: relative;
 }
 
-.HeartButton, .AlarmButton {
+.HeartButton,
+.AlarmButton {
   width: 56px;
   height: 56px;
   border: none;
@@ -124,7 +125,8 @@
 }
 
 .HeartButton {
-  background: var(--color-white) url('../../assets/icons/Icon/product/squreDisabled=false.svg');
+  background: var(--color-white)
+    url('../../assets/icons/Icon/product/squreDisabled=false.svg');
 }
 
 .AlarmButton {
