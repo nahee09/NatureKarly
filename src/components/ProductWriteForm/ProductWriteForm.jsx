@@ -35,20 +35,25 @@ export function ProductWriteForm({
           type="text"
         />
       </h4>
-      <p>
+      <div className={classes.textContent}>
         <label htmlFor={textName}>내용</label>
-        <textarea
-          className={classes.formText}
-          defaultValue={content}
-          id={textName}
-          maxLength="5000"
-          name={textName}
-        ></textarea>
-        <A11yHidden>
-          <span>현재 글자수/제한 글자수</span>
-        </A11yHidden>
-        <span className={classes.numberOfCharacter}>{0}/5000</span>
-      </p>
+        <div className={classes.textWrapper}>
+          <textarea
+            className={classes.formText}
+            id={textName}
+            maxLength="5000"
+            name={textName}
+          ></textarea>
+          <div className={classes.textPlaceHolder}>{content}</div>
+        </div>
+
+        <span className={classes.numberOfCharacter}>
+          <A11yHidden>
+            <span>현재 글자수/제한 글자수</span>
+          </A11yHidden>
+          {0}/5000
+        </span>
+      </div>
       {putCheckSecret(putSecretCheckbox)}
     </form>
   );
@@ -57,6 +62,7 @@ export function ProductWriteForm({
 ProductWriteForm.defaultProps = {
   content: '내용 작성시 주의사항을 적어주세요.',
   putSecretCheckbox: false,
+  textName: '',
 };
 
 ProductWriteForm.propTypes = {
