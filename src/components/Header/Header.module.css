@@ -1,0 +1,70 @@
+.headerTop{
+  margin-top: .75rem;
+}
+
+.topMenu{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.9375rem;
+}
+
+.topMenu a{
+  text-decoration: none;
+  color: var(--color-content);
+  padding: 0 0.625rem;  
+}
+
+.topMenu img{
+  width: .625rem;
+  margin-left: .1875rem;
+}
+
+.topMenu li:first-child a{
+  color: var(--color-primary);
+}
+
+
+.headerSearch{
+  display: flex;
+}
+
+.headerSwitch{
+  display: flex;
+  padding-right: 3.125rem;
+  width: 30%;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerSwitch a{
+  padding: 0 0.625rem;
+  text-decoration: none;
+  color: var(--color-content);
+}
+
+.headerSearchForm{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.headerSearchForm div{
+  transform: translateX(-2.5rem);
+}
+
+
+.headerIconList{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerIconList li{
+  padding: 0 1rem;
+}
+
+.headerIconList li {
+  text-align: center;
+}
