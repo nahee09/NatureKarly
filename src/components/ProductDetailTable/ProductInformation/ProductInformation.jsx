@@ -7,14 +7,14 @@ const ProductInformation = function ({
   allergycontent,
 }) {
   return (
-    <div className={classes.ProductInformation}>
-      <p className={classes.Title}>{title}</p>
-      <div>
+    <dl className={classes.ProductInformation}>
+      <dt className={classes.Title}>{title}</dt>
+      <dd>
         <p className={classes.Content}>{content}</p>
         <p className={classes.SubContent}>{subcontent}</p>
         <p className={classes.AllergyContent}>{allergycontent}</p>
-      </div>
-    </div>
+      </dd>
+    </dl>
   );
 };
 
