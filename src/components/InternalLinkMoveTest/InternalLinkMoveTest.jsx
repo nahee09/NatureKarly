@@ -1,6 +1,6 @@
 import {} from 'prop-types';
 
-import { InternalLinkMoves, Container } from '..';
+import { InternalLinkMoves } from '..';
 
 import classes from './InternalLinkMoveTest.module.css';
 import saladInfoImage from '@/assets/salad/detail_info.jpg';
@@ -15,10 +15,10 @@ export function InternalLinkMoveTest() {
   ];
 
   return (
-    <Container className={classes.align}>
+    <section className={classes.align}>
       <InternalLinkMoves list={internalLinkList} title="상세 메뉴 리스트" />
       <img alt="상품설명이미지" id="productDescription" src={saladViewImage} />
       <img alt="상품상세정보이미지" id="productDetail" src={saladInfoImage} />
-    </Container>
+    </section>
   );
 }
