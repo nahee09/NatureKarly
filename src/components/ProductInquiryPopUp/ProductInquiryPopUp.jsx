@@ -1,6 +1,11 @@
 import {} from 'prop-types';
 
-import { ProductPopUpButtons, ProductPopUpTitle, ProductWriteForm } from '..';
+import {
+  InquiryPlaceHolder,
+  ProductPopUpButtons,
+  ProductPopUpTitle,
+  ProductWriteForm,
+} from '..';
 
 import classes from './ProductInquiryPopUp.module.css';
 import thumbnailImg from '@/assets/salad/thumbnail.jpg';
@@ -15,7 +20,7 @@ export function ProductInquiryPopUp() {
         title="상품 문의하기"
       />
       <ProductWriteForm
-        content="문의 내용을 작성해주세요."
+        content={<InquiryPlaceHolder />}
         id="inquiryWriteForm"
         inputName="inquiryTitleInput"
         putSecretCheckbox={true}
