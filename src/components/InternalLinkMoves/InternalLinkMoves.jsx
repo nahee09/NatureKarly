@@ -1,3 +1,5 @@
+import { useState, useCallback } from 'react';
+
 import { array, string } from 'prop-types';
 
 import { A11yHidden, InternalLinkMove } from '..';
@@ -5,6 +7,12 @@ import { A11yHidden, InternalLinkMove } from '..';
 import classes from './InternalLinkMoves.module.css';
 
 export function InternalLinkMoves({ list, title, ...restProps }) {
+  const [toggle, setToggle] = useState('');
+
+  const handleToggle = useCallback((e) => {
+    setToggle(e.target.closest('li').id);
+  }, []);
+
   return (
     <>
       <A11yHidden>
@@ -14,10 +22,12 @@ export function InternalLinkMoves({ list, title, ...restProps }) {
         {list.map(({ id, name, to, isNumberOption }) => (
           <InternalLinkMove
             key={id}
+            className={id == toggle ? classes.isClicked : ''}
             id={id}
             isNumberOption={isNumberOption}
             name={name}
             to={to}
+            onClick={handleToggle}
           />
         ))}
       </ul>

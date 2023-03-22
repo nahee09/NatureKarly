@@ -17,7 +17,7 @@ export function InternalLinkMove({
   }
 
   return (
-    <li key={id} className={classes.internalLinkMove} {...restProps}>
+    <li key={id} className={classes.internalLinkMove} id={id} {...restProps}>
       <a className={className} href={to}>
         {name}
         {putNumberOption(isNumberOption)}
