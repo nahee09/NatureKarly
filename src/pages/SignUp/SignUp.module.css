@@ -1,0 +1,303 @@
+.signUp {
+  /* border: 3px solid var(--color-black); */
+  display: flex;
+  flex-flow: column nowrap;
+  width: var(--common-main-width);
+}
+
+.signUp > h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.333rem;
+}
+
+.signUp > label {
+  padding: 10px 0;
+  justify-content: flex-end;
+}
+
+.signUp > form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputWrapper {
+  padding: 20px 10px;
+  border-top: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-black);
+  display: grid;
+  grid-template:
+    'id-label         id-input id-input                         id-button' 45px
+    'pw-label         pw-input pw-input                         .' 45px
+    'repw-label       repw-input repw-input                     .' 45px
+    'name-label       name-input name-input                     .' 45px
+    'email-label      email-input email-input                   email-button' 45px
+    'phone-label      phone-input phone-input                   phone-button' 45px
+    'address-label    address-button address-button             .' 45px
+    'gender-label     gender-Wrapper gender-Wrapper         .' 45px
+    'birth-label      birth-input birth-input                   .' 45px
+    'additional-label additional-Wrapper additional-Wrapper .' 45px
+    / 124px auto 360px 143px;
+  gap: 30px 10px;
+}
+
+.inputWrapper > button {
+  justify-content: center;
+  align-items: center;
+}
+
+.termsWrapper {
+  padding: 20px 10px;
+  border-bottom: 1px solid var(--color-gray-300);
+  display: grid;
+  grid-template:
+    'etc-label        etc-all-input etc-all-label               etc-all-label' 45px
+    '.                etc-first-input  etc-first-label          etc-first-icon' 45px
+    '.                etc-second-input etc-second-label         etc-second-icon' 45px
+    '.                etc-third-input etc-third-label etc-third-icon' 45px
+    '.                etc-fourth-input etc-fourth-label         etc-fourth-icon' 45px
+    / 124px auto 360px 143px;
+  gap: 3px 10px;
+}
+
+.termsWrapper > button {
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+.idLabel {
+  grid-area: id-label;
+}
+
+.idInput {
+  grid-area: id-input;
+}
+
+.idButton {
+  grid-area: id-button;
+}
+
+/* -------------------------------------------------------------------------- */
+.pwLabel {
+  grid-area: pw-label;
+}
+
+.pwInput {
+  grid-area: pw-input;
+}
+
+/* -------------------------------------------------------------------------- */
+.repwLabel {
+  grid-area: repw-label;
+}
+
+.repwInput {
+  grid-area: repw-input;
+}
+
+/* -------------------------------------------------------------------------- */
+.nameLabel {
+  grid-area: name-label;
+}
+
+.nameInput {
+  grid-area: name-input;
+}
+
+/* -------------------------------------------------------------------------- */
+.emailLabel {
+  grid-area: email-label;
+}
+
+.emailInput {
+  grid-area: email-input;
+}
+
+.emailButton {
+  grid-area: email-button;
+}
+
+/* -------------------------------------------------------------------------- */
+.phoneLabel {
+  grid-area: phone-label;
+}
+
+.phoneInput {
+  grid-area: phone-input;
+}
+
+.phoneButton {
+  grid-area: phone-button;
+}
+
+/* -------------------------------------------------------------------------- */
+.addressLabel {
+  grid-area: address-label;
+}
+
+.addressButton {
+  grid-area: address-button;
+  position: relative;
+}
+
+.addressButton::after {
+  content: '배송지에 따라 상품 정보가 달라질 수 있습니다.';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-weight: 500;
+  color: var(--color-black);
+  font-size: var(--font-sm);
+}
+
+.addressDetail {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+.genderLabel {
+  grid-area: gender-label;
+}
+
+.genderWrapper {
+  grid-area: gender-Wrapper;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+.maleInput {
+  flex: 0 0 auto;
+}
+.femaleInput {
+  flex: 0 0 auto;
+}
+.noneInput {
+  flex: 0 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+.birthLabel {
+  grid-area: birth-label;
+}
+
+.birthInput {
+  grid-area: birth-input;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+.additionalLabel {
+  grid-area: additional-label;
+}
+
+.additionalWrapper {
+  grid-area: additional-Wrapper;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+.recommendFriendInput {
+  flex: 0 0 auto;
+}
+
+.eventInput {
+  flex: 0 0 auto;
+}
+/* -------------------------------------------------------------------------- */
+.etcLabel {
+  grid-area: etc-label;
+}
+
+.etcAllInput {
+  grid-area: etc-all-input;
+}
+.etcAllLabel {
+  grid-area: etc-all-label;
+  position: relative;
+}
+.etcAllLabel::after {
+  content: '선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  font-weight: 500;
+  color: var(--color-gray-300);
+  font-size: var(--font-sm);
+}
+.etcAllDetail {
+  grid-area: etc-all-detail;
+}
+
+.etcFirstInput {
+  grid-area: etc-first-input;
+}
+.etcFirstLabel {
+  grid-area: etc-first-label;
+  position: relative;
+}
+.etcFirstIcon {
+  grid-area: etc-first-icon;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  color: var(--color-primary);
+}
+
+.etcSecondInput {
+  grid-area: etc-second-input;
+}
+.etcSecondLabel {
+  grid-area: etc-second-label;
+}
+.etcSecondIcon {
+  grid-area: etc-second-icon;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  color: var(--color-primary);
+}
+
+.etcThirdInput {
+  grid-area: etc-third-input;
+}
+.etcThirdLabel {
+  grid-area: etc-third-label;
+}
+.etcThirdIcon {
+  grid-area: etc-third-icon;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  color: var(--color-primary);
+}
+
+.etcFourthInput {
+  grid-area: etc-fourth-input;
+}
+.etcFourthLabel {
+  grid-area: etc-fourth-label;
+}
+.etcFourthIcon {
+  grid-area: etc-fourth-icon;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  color: var(--color-primary);
+}
+
+/* -------------------------------------------------------------------------- */
+.submit {
+  grid-area: submit;
+  height: 45px;
+  width: 366px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
