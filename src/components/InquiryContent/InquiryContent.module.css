@@ -1,4 +1,9 @@
+.inquiryContent {
+  width: 100%;
+}
+
 .inquiryContent td {
+  width: 100%;
   padding: 1.25rem;
   font-size: var(--font-sm);
   color: var(--color-content);
@@ -9,30 +14,18 @@
 }
 
 .inquiryContent IconComponent {
-  display: inline-block;
   margin-right: 2.5rem;
 }
 
-.question {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2.5rem;
-}
-
-.question p {
-  margin-left: 0.75rem;
-}
-
-.answer {
+.contentWrapper {
   display: flex;
 }
 
-.answerContent {
-  width: 30.0625rem;
+.content {
   margin-left: 0.75rem;
 }
 
-.answerContent time {
+.inquiryContent time {
   display: block;
   margin-top: 0.75rem;
 }

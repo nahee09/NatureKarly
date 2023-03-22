@@ -2,9 +2,10 @@ import {} from 'prop-types';
 
 import {
   TableNoticeHeader,
-  InquiryContent,
   NormalNoticeContent,
   InquiryTitle,
+  InquiryQuestion,
+  InquiryAnswer,
 } from '..';
 
 import classes from './ProductInquiryTable.module.css';
@@ -27,7 +28,8 @@ export function ProductInquiryTable() {
         />
         <NormalNoticeContent />
         <InquiryTitle />
-        <InquiryContent />
+        <InquiryQuestion />
+        <InquiryAnswer />
         <TableNoticeHeader
           additional={true}
           isNoticeTag={false}
