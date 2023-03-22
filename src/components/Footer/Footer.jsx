@@ -28,21 +28,27 @@ export default function Footer() {
             </div>
             <ul className={classes.inquiry}>
               <li>
-                <button>카카오톡 문의</button>
+                <Button style={{ backgroundColor: 'transparent' }}>
+                카카오톡 문의
+                </Button>
                 <div>
                   <p>월~토요일 <span aria-hidden="true">|</span> 오전 7시 - 오후 6시</p>
                   <p>일/공휴일 <span aria-hidden="true">|</span> 오전 7시 - 오후 1시</p>
                 </div>
               </li>
               <li>
-                <button>1:1 문의</button>
+                <Button style={{ backgroundColor: 'transparent' }}>
+                  1:1 문의
+                </Button>
                 <div>
                     <p>365일</p>
                     <p>고객센터 운영시간에 순착적으로 답변드리겠습니다.</p>
                 </div>
               </li>
               <li>
-                <button>대량주문 문의</button>
+                <Button style={{ backgroundColor: 'transparent' }}>
+                  대량주문 문의
+                </Button>
                 <div>
                   <p>월~금요일 <span aria-hidden="true">|</span> 오전 9시 - 오후 6시</p>
                   <p>점심시간 <span aria-hidden="true">|</span> 낮 12시 - 오후 1시</p>
