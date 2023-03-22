@@ -1,6 +1,11 @@
 import {} from 'prop-types';
 
-import { ProductPopUpButtons, ProductPopUpTitle, ProductWriteForm } from '..';
+import {
+  ProductPopUpButtons,
+  ProductPopUpTitle,
+  ProductWriteForm,
+  ReviewPlaceHolder,
+} from '..';
 
 import classes from './ProductReviewPopUp.module.css';
 import thumbnailImg from '@/assets/salad/thumbnail.jpg';
@@ -15,7 +20,7 @@ export function ProductReviewPopUp() {
         title="후기 작성"
       />
       <ProductWriteForm
-        content="후기를 작성해주세요."
+        content={<ReviewPlaceHolder />}
         id="reviewWriteForm"
         inputName="reviewTitleInput"
         putSecretCheckbox={false}
