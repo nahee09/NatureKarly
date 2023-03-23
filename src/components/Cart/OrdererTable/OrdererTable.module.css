@@ -17,8 +17,13 @@
   line-height: var(--line-height-md);
 }
 
-.BoxDesign h4 {
-  padding-left: 36px;
+.BoxDesign h4::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../../../assets/icons/Icon/header/location.svg);
+  vertical-align: middle;
 }
 
 .Address {

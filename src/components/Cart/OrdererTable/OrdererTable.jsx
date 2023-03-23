@@ -1,6 +1,7 @@
 import { A11yHidden } from '../../A11yHidden/A11yHidden';
 
 import classes from './OrdererTable.module.css';
+import { Button } from '@/components/Button/Button';
 
 const OrdererTable = function ({
   price,
@@ -19,7 +20,20 @@ const OrdererTable = function ({
           서울 중랑구 면목로 42길 11 &#40;행운빌딩&#41; 603호
         </p>
         <p className={classes.DeliveryType}>샛별배송</p>
-        <button className={classes.AddressChangeButton}>배송지변경</button>
+        <Button
+          style={{
+            marginTop: '12px',
+            width: '100%',
+            justifyContent: 'center',
+            background: 'none',
+            border: '1px solid var(--color-primary)',
+            color: 'var(--color-primary)',
+            padding: '10px 0',
+            lineHeight: 'var(--line-height-md)',
+          }}
+        >
+          배송지변경
+        </Button>
       </div>
       <div className={[classes.BoxDesign, classes.PriceTable].join(' ')}>
         <A11yHidden>
@@ -54,7 +68,16 @@ const OrdererTable = function ({
         </p>
         <p className={classes.PointGuide}>최대 36원 적립 일반 0.1%</p>
       </div>
-      <button>주문하기</button>
+      <Button
+        style={{
+          width: '100%',
+          justifyContent: 'center',
+          padding: '10px 0',
+          lineHeight: '150%',
+        }}
+      >
+        주문하기
+      </Button>
       <article className={classes.OrderInformaiton}>
         <p>쿠폰/적립금은 주문서에서 사용 가능합니다</p>
         <p>&#91;주문완료&#93; 상태일 경우에만 주문 취소 가능합니다</p>
