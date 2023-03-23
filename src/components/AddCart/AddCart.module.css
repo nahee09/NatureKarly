@@ -2,13 +2,24 @@
   box-sizing: border-box;
 }
 
+.AddCartBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
 .AddCart {
+  position: absolute;
   width: 396px;
   height: 292px;
   border-radius: 16px;
   padding: 24px 20px;
-  background: #ccc;
-  margin: 20px;
+  background: var(--color-white);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--box-shadow-below-medium);
 }
 
 .AddCart h3 {
@@ -62,15 +73,14 @@
 
 .AddCartButton {
   margin-top: 28px;
+  display: flex;
+  gap: 8px;
 }
 
 .AddCartButton button {
-  width: 174px;
-  height: 54px;
-  border: 0;
-  padding: 0;
-}
-
-.AddCartButton button:first-child {
-  margin-right: 8px;
+  width: 100%;
+  padding: 13px 0;
+  line-height: var(--line-height-md);
+  justify-content: center;
+  align-items: center;
 }
