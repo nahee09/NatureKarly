@@ -1,0 +1,34 @@
+.detailDescription {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.detailDescription > h3 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.detailDescription > p {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-content);
+}
+
+.detailDescription > ul {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-gray-500);
+  line-height: var(--line-height-md);
+}
+.detailDescription li::before {
+  content: '•';
+  margin: 0 0.4375rem;
+}
+
+.detailDescription Button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
