@@ -4,6 +4,8 @@
   border-style: none;
   background-color: transparent;
   font-weight: 600;
+  height: 72px;
+  align-items: center;
 }
 
 .menu::before{
@@ -26,24 +28,18 @@
 .menuList{
   position: absolute;
   top: 4.75rem;
-  left: 1.875rem;
   width: 15.4375rem;
   height: 55rem;
   border: 1px solid var(--color-gray-100);
 }
 
-.menuList li{
-  height: 40px;
+.menuList a{
+  height: 1.5rem;
   display: flex;
   align-items: center;
-  padding: 8px 0 8px 12px;
+  padding: .5rem 0 .5rem .75rem;
 }
 
 .menuList li::before{
-  
-}
 
-/* 
-.hidden{
-  display: none;
-} */
+}
