@@ -5,27 +5,27 @@
   margin: 1.75rem 0;
 }
 
-.Medium{
+.Medium {
   font-size: var(--font-md);
-  font-weight: 600; 
+  font-weight: 600;
 }
 
-.Large{
+.Large {
   font-size: var(--font-lg);
-  font-weight: 600; 
+  font-weight: 600;
 }
 
-.XL{
+.XL {
   font-size: var(--font-xl);
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-.XXL{
+.XXL {
   font-size: var(--font-xxl);
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-.XXL{
+.XXL {
   font-size: var(--font-xxxl);
-  font-weight: 700; 
+  font-weight: 700;
 }
