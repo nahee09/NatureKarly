@@ -192,18 +192,98 @@ export function Product({ isSwiper, isSale }) {
   }
 
   return (
-    <>
-      <div className={classes.productImg}>
-        <img alt="쭈꾸미" src={thumb} />
-        {/* 장바구니 아이콘 */}
-      </div>
-      <ul className={classes.productInfo}>
-        <li className={classes.delivery}>샛별배송</li>
-        <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-        {ProductDiscount(isSale)}
-        <li className={classes.summary}>CJ즉석밥 고소한 맛의 발아 현미밥</li>
-      </ul>
-    </>
+    <ul className={classes.productList}>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+      <li>
+        <div className={classes.productImg}>
+          <img alt="쭈꾸미" src={thumb} />
+          <IconComponent
+            className={classes.cart}
+            data-image="cart"
+            dataProps={dataProps}
+            role="button"
+          />
+        </div>
+        <ul className={classes.productInfo}>
+          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
+          {ProductDiscount(isSale)}
+        </ul>
+      </li>
+    </ul>
   );
 }
 
