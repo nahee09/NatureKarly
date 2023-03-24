@@ -21,3 +21,29 @@
 .menu:hover{
   color: var(--color-primary);
 }
+
+
+.menuList{
+  position: absolute;
+  top: 4.75rem;
+  left: 1.875rem;
+  width: 15.4375rem;
+  height: 55rem;
+  border: 1px solid var(--color-gray-100);
+}
+
+.menuList li{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 12px;
+}
+
+.menuList li::before{
+  
+}
+
+/* 
+.hidden{
+  display: none;
+} */
