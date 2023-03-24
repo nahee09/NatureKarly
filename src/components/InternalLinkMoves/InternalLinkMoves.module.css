@@ -1,0 +1,24 @@
+.detailMenuList {
+  max-width: 1050px;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  color: var(--color-content);
+  font-size: var(--font-md);
+  font-weight: bold;
+}
+
+.detailMenuList .isClicked {
+  background-color: #ffff;
+  color: var(--color-primary);
+  border-top-color: var(--color-gray-100);
+  border-bottom: none;
+}
+
+.detailMenuList li:first-child .isClicked {
+  border-left-color: var(--color-gray-100);
+}
+
+.detailMenuList li:last-child .isClicked {
+  border-right-color: var(--color-gray-100);
+}
