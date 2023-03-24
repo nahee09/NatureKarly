@@ -1,0 +1,20 @@
+.text > * {
+  color: var(--color-gray-400);
+  margin-bottom: 0.75rem;
+  font-size: var(--font-sm);
+}
+
+.title {
+  font-size: var(--font-md);
+  font-weight: 600;
+  pointer-events: auto;
+}
+
+.text li::before {
+  content: '•';
+  margin-right: 0.25rem;
+}
+
+.text li {
+  margin-bottom: 0.25rem;
+}
