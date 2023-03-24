@@ -7,14 +7,23 @@ export const nameState = atom({ key: 'nameState', default: '' });
 export const emailState = atom({ key: 'emailState', default: '' });
 export const phoneState = atom({ key: 'phoneState', default: '' });
 export const addressState = atom({ key: 'addressState', default: '' });
-export const genderState = atom({ key: 'genderState', default: 2 });
+export const genderState = atom({ key: 'genderState', default: '2' });
 export const birthState = atom({ key: 'birthState', default: '' });
-export const additionalState = atom({ key: 'additionalState', default: 0 });
-export const etcState = atom({ key: 'etcState', default: 0 });
+export const additionalState = atom({
+  key: 'additionalState',
+  default: [false, false],
+});
 
-export const etcAllAgree = selector({
-  key: 'etcAllAgree',
+export const etcState = atom({
+  key: 'etcState',
+  default: [false, false, false, false],
+});
+
+export const etcIsAllAgree = selector({
+  key: 'etcIsAllAgree',
   get: ({ get }) => {
-    return get(etcState) === 15;
+    const etcStateList = get(etcState);
+
+    return !etcStateList.includes(false);
   },
 });

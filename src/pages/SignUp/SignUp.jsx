@@ -1,11 +1,31 @@
-import { useId } from 'react';
+import { useId, Fragment } from 'react';
+
+import { useSetRecoilState } from 'recoil';
 
 import classes from './SignUp.module.css';
+import {
+  birthState,
+  emailState,
+  genderState,
+  idState,
+  nameState,
+  phoneState,
+  pwState,
+  repwState,
+} from '@/@store/signUpState';
 import { Button, Label } from '@/components';
 import { Fieldset } from '@/components/Fieldset/Fieldset';
 import { IconComponent } from '@/components/IconComponent/IconComponent';
-import { Input } from '@/components/Input/Input';
-// import { auth } from '@/firebase/auth';
+import { AdditionalInput } from '@/components/Input/Checkbox/AdditionalInput';
+import { EtcInput } from '@/components/Input/Checkbox/EtcInput';
+import { BirthInput } from '@/components/Input/General/BirthInput';
+import { EmailInput } from '@/components/Input/General/EmailInput';
+import { IdInput } from '@/components/Input/General/IdInput';
+import { NameInput } from '@/components/Input/General/NameInput';
+import { PhoneInput } from '@/components/Input/General/PhoneInput';
+import { PwInput } from '@/components/Input/General/PwInput';
+import { RepwInput } from '@/components/Input/General/RepwInput';
+import { GenderInput } from '@/components/Input/Radio/GenderInput';
 import { useDocumentTitle } from '@/hook/useDocumentTitle';
 
 export function SignUp() {
@@ -31,6 +51,15 @@ export function SignUp() {
   const etcThirdId = useId();
   const etcFourthId = useId();
 
+  const setId = useSetRecoilState(idState);
+  const setPw = useSetRecoilState(pwState);
+  const setRepw = useSetRecoilState(repwState);
+  const setName = useSetRecoilState(nameState);
+  const setEmail = useSetRecoilState(emailState);
+  const setPhone = useSetRecoilState(phoneState);
+  const setGender = useSetRecoilState(genderState);
+  const setBirth = useSetRecoilState(birthState);
+
   const dataProps = {
     width: '54px',
     height: '19px',
@@ -42,8 +71,75 @@ export function SignUp() {
   useDocumentTitle('회원가입 - 칼리');
 
   const handleExpandTerms = () => {
-    console.log('expand terms');
+    // console.log('expand terms');
   };
+
+  const handleIdInput = (event) => {
+    event.preventDefault();
+    setId(event.target.value);
+  };
+
+  const handlePwInput = (event) => {
+    event.preventDefault();
+    setPw(event.target.value);
+  };
+
+  const handleRepwInput = (event) => {
+    event.preventDefault();
+    setRepw(event.target.value);
+  };
+
+  const handleNameInput = (event) => {
+    event.preventDefault();
+    setName(event.target.value);
+  };
+
+  const handleEmailInput = (event) => {
+    event.preventDefault();
+    setEmail(event.target.value);
+  };
+
+  const handlePhoneInput = (event) => {
+    event.preventDefault();
+    setPhone(event.target.value);
+  };
+
+  const handleBirthInput = (event) => {
+    event.preventDefault();
+    setBirth(event.target.value);
+  };
+
+  const handleGenderInput = (event) => {
+    setGender(event.target.value);
+  };
+
+  const addtionInfo = [
+    {
+      id: recommendFriendId,
+      className: 'recommendFriend',
+      content: '친구초대 추천인 아이디',
+    },
+    { id: eventId, className: 'event', content: '참여 이벤트명' },
+  ];
+
+  const etcInfo = [
+    { id: etcFirstId, className: 'etcFirst', content: '이용약관 동의(필수)' },
+    {
+      id: etcSecondId,
+      className: 'etcSecond',
+      content: '개인정보 수집 · 이용 동의 (필수)',
+    },
+    {
+      id: etcThirdId,
+      className: 'etcThird',
+      content: '무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)',
+    },
+    {
+      id: etcFourthId,
+      className: 'etcFourth',
+      content: '본인은 만 14세 이상입니다. (필수)',
+    },
+  ];
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', padding: '80px' }}>
@@ -62,11 +158,11 @@ export function SignUp() {
               >
                 아이디
               </Label>
-              <Input
+              <IdInput
                 className={classes.idInput}
                 id={idId}
                 placeholder="아이디를 입력해주세요"
-                useage="id"
+                onChange={handleIdInput}
               />
               <Button isSecondary className={classes.idButton}>
                 중복확인
@@ -78,11 +174,11 @@ export function SignUp() {
               >
                 비밀번호
               </Label>
-              <Input
+              <PwInput
                 className={classes.pwInput}
                 id={passwordId}
                 placeholder="비밀번호를 입력해주세요"
-                useage="pw"
+                onChange={handlePwInput}
               />
               <Label
                 className={classes.repwLabel}
@@ -91,11 +187,11 @@ export function SignUp() {
               >
                 비밀번호 확인
               </Label>
-              <Input
+              <RepwInput
                 className={classes.repwInput}
                 id={rePasswordId}
                 placeholder="비밀번호를 한번 더 입력해주세요"
-                useage="repw"
+                onChange={handleRepwInput}
               />
               <Label
                 className={classes.nameLabel}
@@ -104,11 +200,11 @@ export function SignUp() {
               >
                 이름
               </Label>
-              <Input
+              <NameInput
                 className={classes.nameInput}
                 id={nameId}
                 placeholder="이름을 입력해주세요"
-                useage="name"
+                onChange={handleNameInput}
               />
               <Label
                 className={classes.emailLabel}
@@ -117,11 +213,11 @@ export function SignUp() {
               >
                 이메일
               </Label>
-              <Input
+              <EmailInput
                 className={classes.emailInput}
                 id={emailId}
                 placeholder="예) marketkarly@karly.com"
-                useage="email"
+                onChange={handleEmailInput}
               />
               <Button isSecondary className={classes.emailButton}>
                 중복확인
@@ -133,11 +229,11 @@ export function SignUp() {
               >
                 휴대폰
               </Label>
-              <Input
+              <PhoneInput
                 className={classes.phoneInput}
                 id={phoneId}
                 placeholder="숫자만 입력해주세요"
-                useage="phone"
+                onChange={handlePhoneInput}
               />
               <Button isSecondary className={classes.phoneButton}>
                 인증번호 받기
@@ -156,12 +252,12 @@ export function SignUp() {
                 성별
               </Label>
               <div className={classes.genderWrapper}>
-                <Input
+                <GenderInput
                   className={classes.maleInput}
                   id={maleId}
                   name={genderId}
-                  useage="gender"
-                  value={0}
+                  value="0"
+                  onClick={handleGenderInput}
                 />
                 <Label
                   data-is-need-curosr-pointer
@@ -170,12 +266,12 @@ export function SignUp() {
                 >
                   남자
                 </Label>
-                <Input
+                <GenderInput
                   className={classes.femaleInput}
                   id={femaleId}
                   name={genderId}
-                  useage="gender"
-                  value={1}
+                  value="1"
+                  onClick={handleGenderInput}
                 />
                 <Label
                   data-is-need-curosr-pointer
@@ -184,12 +280,12 @@ export function SignUp() {
                 >
                   여자
                 </Label>
-                <Input
+                <GenderInput
                   className={classes.noneInput}
                   id={noneId}
                   name={genderId}
-                  useage="gender"
-                  value={2}
+                  value="2"
+                  onClick={handleGenderInput}
                 />
                 <Label
                   data-is-need-curosr-pointer
@@ -202,11 +298,11 @@ export function SignUp() {
               <Label className={classes.birthLabel} htmlFor={birthId}>
                 생년월일
               </Label>
-              <Input
+              <BirthInput
                 className={classes.birthInput}
                 id={birthId}
                 placeholder="YYYY / MM / DD"
-                useage="birth"
+                onChange={handleBirthInput}
               />
               <Label
                 className={classes.additionalLabel}
@@ -215,41 +311,34 @@ export function SignUp() {
                 추가입력 사항
               </Label>
               <div className={classes.additionalWrapper}>
-                <Input
-                  className={classes.recommendFriendInput}
-                  id={recommendFriendId}
-                  useage="addition"
-                />
-                <Label
-                  data-is-need-curosr-pointer
-                  className={classes.recommendFriendLabel}
-                  htmlFor={recommendFriendId}
-                >
-                  친구초대 추천인 아이디
-                </Label>
-                <Input
-                  className={classes.eventInput}
-                  id={eventId}
-                  useage="addition"
-                />
-                <Label
-                  data-is-need-curosr-pointer
-                  className={classes.eventLabel}
-                  htmlFor={eventId}
-                >
-                  참여 이벤트명
-                </Label>
+                {addtionInfo.map((item, index) => (
+                  <Fragment key={item.id}>
+                    <AdditionalInput
+                      className={classes[`${item.className}Input`]}
+                      id={item.id}
+                      index={index}
+                    />
+                    <Label
+                      data-is-need-curosr-pointer
+                      className={classes[`${item.className}Label`]}
+                      htmlFor={item.id}
+                      id={item.id}
+                    >
+                      {item.content}
+                    </Label>
+                  </Fragment>
+                ))}
               </div>
             </div>
             <div className={classes.termsWrapper}>
               <Label className={classes.etcLabel} htmlFor={etcId}>
                 이용약관동의
               </Label>
-              <Input
+              <EtcInput
                 data-is-checked-default
+                isControllAll
                 className={classes.etcAllInput}
                 id={etcAllId}
-                useage="etc"
               />
               <Label
                 data-is-need-curosr-pointer
@@ -258,94 +347,32 @@ export function SignUp() {
               >
                 전체 동의합니다.
               </Label>
-              <Input
-                data-is-checked-default
-                className={classes.etcFirstInput}
-                id={etcFirstId}
-                useage="etc"
-              />
-              <Label
-                data-is-need-curosr-pointer
-                className={classes.etcFirstLabel}
-                htmlFor={etcFirstId}
-              >
-                이용약관 동의(필수)
-              </Label>
-              <IconComponent
-                data-is-need-curosr-pointer
-                className={classes.etcFirstIcon}
-                data-image="Direction=Right"
-                dataProps={dataProps}
-                onMouseOver={handleExpandTerms}
-              >
-                약관보기
-              </IconComponent>
-              <Input
-                data-is-checked-default
-                className={classes.etcSecondInput}
-                id={etcSecondId}
-                useage="etc"
-              />
-              <Label
-                data-is-need-curosr-pointer
-                className={classes.etcSecondLabel}
-                htmlFor={etcSecondId}
-              >
-                개인정보 수집 · 이용 동의 (필수)
-              </Label>
-              <IconComponent
-                data-is-need-curosr-pointer
-                className={classes.etcSecondIcon}
-                data-image="Direction=Right"
-                dataProps={dataProps}
-                onMouseOver={handleExpandTerms}
-              >
-                약관보기
-              </IconComponent>
-              <Input
-                data-is-checked-default
-                className={classes.etcThirdInput}
-                id={etcThirdId}
-                useage="etc"
-              />
-              <Label
-                data-is-need-curosr-pointer
-                className={classes.etcThirdLabel}
-                htmlFor={etcThirdId}
-              >
-                무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
-              </Label>
-              <IconComponent
-                data-is-need-curosr-pointer
-                className={classes.etcThirdIcon}
-                data-image="Direction=Right"
-                dataProps={dataProps}
-                onMouseOver={handleExpandTerms}
-              >
-                약관보기
-              </IconComponent>
-              <Input
-                data-is-checked-default
-                className={classes.etcFourthInput}
-                id={etcFourthId}
-                useage="etc"
-              />
-              <Label
-                data-is-need-curosr-pointer
-                className={classes.etcFourthLabel}
-                htmlFor={etcFourthId}
-              >
-                본인은 만 14세 이상입니다. (필수)
-              </Label>
-              <IconComponent
-                data-is-need-curosr-pointer
-                className={classes.etcFourthIcon}
-                data-image="Direction=Right"
-                dataProps={dataProps}
-                onMouseOver={handleExpandTerms}
-              >
-                약관보기
-              </IconComponent>
+              {etcInfo.map((item, index) => (
+                <Fragment key={item.id}>
+                  <EtcInput
+                    data-is-checked-default
+                    className={classes[`${item.className}Input`]}
+                    id={item.id}
+                    index={index}
+                  />
+                  <Label
+                    data-is-need-curosr-pointer
+                    className={classes[`${item.className}Label`]}
+                    htmlFor={item.id}
+                  >
+                    {item.content}
+                  </Label>
+                  <IconComponent
+                    data-is-need-curosr-pointer
+                    className={classes[`${item.className}Icon`]}
+                    data-image="Direction=Right"
+                    dataProps={dataProps}
+                    onMouseOver={handleExpandTerms}
+                  >
+                    약관보기
+                  </IconComponent>
+                </Fragment>
+              ))}
             </div>
             <Button className={classes.submit}>가입하기</Button>
           </Fieldset>
