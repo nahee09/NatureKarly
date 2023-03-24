@@ -5,8 +5,11 @@ export * from './Button/Button';
 export * from './IconComponent/IconComponent';
 export * from './Input/Input';
 export * from './Label/Label';
-export * from './Container/Container';
-export * from './Tag/Tag';
+
+/* ------------------------------- 내부 링크 이동 리스트 ------------------------------ */
+export * from './InternalLinkMove/InternalLinkMove';
+export * from './InternalLinkMoves/InternalLinkMoves';
+export * from './InternalLinkMoveTest/InternalLinkMoveTest';
 
 /* ------------------------------- 후기 및 문의 팝업창 ------------------------------ */
 export * from './ProductReviewPopUp/ProductReviewPopUp';
@@ -35,4 +38,3 @@ export * from './NormalNoticeContent/NormalNoticeContent';
 export * from './InquiryTitle/InquiryTitle';
 export * from './InquiryQuestion/InquiryQuestion';
 export * from './InquiryAnswer/InquiryAnswer';
-
