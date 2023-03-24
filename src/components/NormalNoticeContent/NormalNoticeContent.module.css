@@ -1,0 +1,9 @@
+.normalNoticeContent td {
+  padding: 1.25rem;
+  font-size: var(--font-sm);
+  color: var(--color-content);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+  background-color: var(--color-gray-50);
+  white-space: pre-wrap;
+}

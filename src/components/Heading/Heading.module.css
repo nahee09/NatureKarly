@@ -1,0 +1,13 @@
+.HeadingTwo {
+  font-size: ;
+  font-weight: 600;
+}
+
+.HeadingThree {
+  font-size: ;
+}
+
+.HeadingFour {
+  font-size: var(--font-md);
+  font-weight: 400;
+}
