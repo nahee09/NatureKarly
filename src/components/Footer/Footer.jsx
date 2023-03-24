@@ -18,7 +18,7 @@ import wooriBank from '@/assets/icons/Icon/footer/logo_wooriBank.svg';
 export default function Footer() {
   return (
     <footer className={classes.Footer}>
-      <Container>
+      <Container className={classes.footerContainer}>
         <div className={classes.footerInner}>
           <section className={classes.customerService}>
             <h2>고객행복센터</h2>
