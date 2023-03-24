@@ -16,44 +16,12 @@
   padding: 0.5rem;
 }
 
-.formInput {
-  width: 100%;
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--border-radius-default);
-  padding: 0.5625rem 0 0.5625rem 1.25rem;
-}
-
 .textContent {
   display: flex;
   position: relative;
 }
 
-.textWrapper {
-  width: 100%;
-  height: 12.375rem;
-  display: flex;
-  position: relative;
-}
-
-.textPlaceHolder {
-  color: var(--color-gray-300);
-  width: 100%;
-  height: 12.375rem;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  overflow-y: auto;
-  pointer-events: none;
-}
-.textWrapper textarea:focus + .textPlaceholder {
-  display: none;
-}
-
-.formText {
+/* .formText {
   width: 100%;
   height: 12.375rem;
   border: 1px solid var(--color-gray-300);
@@ -62,27 +30,11 @@
   color: var(--color-gray-500);
   padding: 1rem 0 0 1rem;
   background-color: transparent;
-}
+} */
 
 .formText:focus,
 .formInput:focus {
   outline: 1px solid var(--color-black);
-}
-
-.formText::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-.formText::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-gray-200);
-  background-clip: padding-box;
-  border: 3px solid transparent;
-}
-
-.formText::-webkit-scrollbar-track {
-  border: 1px solid var(--color-gray-200);
-  background-color: var(--color-gray-50);
 }
 
 .numberOfCharacter {

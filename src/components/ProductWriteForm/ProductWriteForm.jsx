@@ -1,6 +1,6 @@
 import { bool, node, string } from 'prop-types';
 
-import { A11yHidden, Input } from '..';
+import { A11yHidden, Input, ProductPopUpContent, ProductPopUpInput } from '..';
 
 import classes from './ProductWriteForm.module.css';
 
@@ -26,27 +26,11 @@ export function ProductWriteForm({
     <form action="/" className={classes.productForm} id={id} method="GET">
       <h4>
         <label htmlFor={inputName}>제목</label>
-        <input
-          className={classes.formInput}
-          id={inputName}
-          maxLength="35"
-          name={inputName}
-          placeholder="제목을 입력해주세요"
-          type="text"
-        />
+        <ProductPopUpInput inputName={inputName} />
       </h4>
       <div className={classes.textContent}>
         <label htmlFor={textName}>내용</label>
-        <div className={classes.textWrapper}>
-          <textarea
-            className={classes.formText}
-            id={textName}
-            maxLength="5000"
-            name={textName}
-          ></textarea>
-          <div className={classes.textPlaceHolder}>{content}</div>
-        </div>
-
+        <ProductPopUpContent content={content} textName={textName} />
         <span className={classes.numberOfCharacter}>
           <A11yHidden>
             <span>현재 글자수/제한 글자수</span>
