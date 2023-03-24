@@ -12,3 +12,5 @@ export * from './ProductWriteForm/ProductWriteForm';
 export * from './ProductPopUpButtons/ProductPopUpButtons';
 export * from './ReviewPlaceHolder/ReviewPlaceHolder';
 export * from './InquiryPlaceHolder/InquiryPlaceHolder';
+export * from './ProductPopUpInput/ProductPopUpInput';
+export * from './ProductPopUpContent/ProductPopUpContent';
