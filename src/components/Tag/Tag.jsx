@@ -28,7 +28,7 @@ export function Tag({
 Tag.defaultProps = {
   borderRadius: 'borderRadiusDefault',
   fontSize: '0.75rem',
-  padding: '0 0.5rem',
+  padding: '0.0625rem 0.5rem ',
 };
 
 Tag.propTypes = {
