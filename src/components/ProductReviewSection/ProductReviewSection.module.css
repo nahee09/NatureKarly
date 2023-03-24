@@ -1,0 +1,40 @@
+.tableOption {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.tableOption span:nth-of-type(1) {
+  font-size: var(--font-sm);
+  color: var(--color-content);
+}
+.tableOption span:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+.tableOption button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--color-gray-300);
+  font-weight: 600;
+}
+
+.tableOption button:nth-of-type(1) {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.tableOption button:nth-of-type(1)::after {
+  content: '';
+  border: 1px solid var(--color-gray-300);
+  height: 50%;
+  margin: 0 0.5rem;
+  position: absolute;
+  top: 4px;
+  right: -17px;
+}
+
+.tableOption .isActive {
+  color: var(--color-content);
+}

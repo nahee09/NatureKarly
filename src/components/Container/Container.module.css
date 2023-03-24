@@ -1,0 +1,25 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.widthLarge {
+  max-width: 1050px;
+}
+
+.widthMedium {
+  max-width: 640px;
+}
+
+.widthSmall {
+  max-width: 340px;
+}
+
