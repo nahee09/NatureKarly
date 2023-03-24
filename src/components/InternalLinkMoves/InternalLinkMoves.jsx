@@ -22,7 +22,7 @@ export function InternalLinkMoves({ list, title, ...restProps }) {
         {list.map(({ id, name, to, isNumberOption }) => (
           <InternalLinkMove
             key={id}
-            className={id == toggle ? classes.isClicked : ''}
+            anchorClass={id == toggle ? classes.isClicked : ''}
             id={id}
             isNumberOption={isNumberOption}
             name={name}

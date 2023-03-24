@@ -8,6 +8,7 @@ export function InternalLinkMove({
   isNumberOption,
   id,
   className,
+  anchorClass,
   ...restProps
 }) {
   function putNumberOption(isNumberOption) {
@@ -16,9 +17,11 @@ export function InternalLinkMove({
     }
   }
 
+  const combineClassName = `${classes.internalLinkMove} ${className}`.trim();
+
   return (
-    <li key={id} className={classes.internalLinkMove} id={id} {...restProps}>
-      <a className={className} href={to}>
+    <li key={id} className={combineClassName} id={id} {...restProps}>
+      <a className={anchorClass} href={to}>
         {name}
         {putNumberOption(isNumberOption)}
       </a>
@@ -32,6 +35,7 @@ InternalLinkMove.defaultProps = {
   to: '',
   isNumberOption: false,
   className: '',
+  anchorClass: '',
 };
 
 InternalLinkMove.propTypes = {
@@ -40,4 +44,5 @@ InternalLinkMove.propTypes = {
   to: string,
   isNumberOption: bool,
   className: string,
+  anchorClass: string,
 };
