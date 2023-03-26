@@ -1,15 +1,22 @@
+import { useContext } from 'react';
+
 import { string } from 'prop-types';
 
 import { A11yHidden, IconComponent } from '..';
 
 import classes from './ProductPopUpTitle.module.css';
+import { modalCloseContext } from '@/components/ModalWindow/ModalWindow';
 
 export function ProductPopUpTitle({ title, image, alt, imageTitle }) {
   return (
     <>
       <section className={classes.popUpTitle}>
         <h3>{title}</h3>
-        <button className={classes.closeButton} type="button">
+        <button
+          className={classes.closeButton}
+          type="button"
+          onClick={useContext(modalCloseContext)}
+        >
           <A11yHidden>
             <span>닫기</span>
           </A11yHidden>

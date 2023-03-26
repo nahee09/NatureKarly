@@ -5,6 +5,8 @@ import {
   ProductTable,
   PageMoveButtons,
   ProductInquiryTable,
+  ModalWindow,
+  ProductInquiryPopUp,
 } from '..';
 
 export function ProductInquirySection() {
@@ -28,6 +30,9 @@ export function ProductInquirySection() {
         수 있습니다."
       />
       <PageMoveButtons />
+      <ModalWindow modalId="inquiryModal">
+        <ProductInquiryPopUp tabIndex={0} />
+      </ModalWindow>
     </>
   );
 }
