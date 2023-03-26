@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useLayoutEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import { Navigation } from 'swiper';
@@ -7,37 +7,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import classes from './Product.module.css';
-import thumb from '@/assets/jukkumi/thumbnail.jpg';
+
 import { A11yHidden, IconComponent } from '@/components';
+import { useReadData } from '@/firebase/firestore';
 
-function ProductDiscount(isSale) {
-  if (!isSale) {
-    return (
-      <li className={classes.discount}>
-        <p className={classes.salePrice}>4,980원</p>
-      </li>
-    );
-  }
-
-  return (
-    <li className={classes.discount}>
-      <p className={classes.discountRate}>
-        <A11yHidden>할인율</A11yHidden>24%
-      </p>
-      <p className={classes.salePrice}>
-        <A11yHidden>할인가</A11yHidden>4,980원
-      </p>
-      <p className={classes.price}>
-        <A11yHidden>정상가</A11yHidden>24,900원
-      </p>
-    </li>
-  );
-}
-
-export function Product({ isSwiper, isSale }) {
+export function Product({ isSwiper }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const dataProps = { width: '45px', height: '45px' };
+  const datadata = { width: '45px', height: '45px' };
+
+  const { readData, data, isLoading, error } = useReadData('products');
+
+  // useLayoutEffect(() => {
+  //   const db = getFirestore(firebaseApp);
+  //   const productsRef = collection(db, 'products');
+
+  //   getDocs(productsRef).then((res) => {
+  //     const data = [];
+  //     res.forEach(async (data) => {
+  //       data.push(data.data());
+  //     });
+  //     setdata(data);
+  //   });
+  // }, []);
+
   if (isSwiper) {
     return (
       <div className="productSwiper">
@@ -56,126 +49,41 @@ export function Product({ isSwiper, isSale }) {
             swiper.navigation.update();
           }}
         >
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.productImg}>
-              <img alt="쭈꾸미" src={thumb} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                dataProps={dataProps}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-              {ProductDiscount(isSale)}
-            </ul>
-          </SwiperSlide>
+          {data.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <div className={classes.productImg}>
+                  <img alt={item.image.alt} src={item.image.thumbnail} />
+                  <IconComponent
+                    className={classes.cart}
+                    data-image="cart"
+                    datadata={datadata}
+                    role="button"
+                  />
+                </div>
+                <ul className={classes.productInfo}>
+                  <li className={classes.name}>{item.name}</li>
+                  {item.salePrice ?
+                    <li className={classes.discount}>
+                      <p className={classes.discountRate}>
+                        <A11yHidden>할인율</A11yHidden> {`${item.discount * 100}%`}
+                      </p>
+                      <p className={classes.salePrice}>
+                        <A11yHidden>할인가</A11yHidden> {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                      </p>
+                      <p className={classes.price}>
+                        <A11yHidden>정상가</A11yHidden> {`${item.price.toLocaleString('ko-KR')}원`}
+                      </p>
+                    </li>
+                    :
+                    <li className={classes.discount}>
+                      <p className={classes.salePrice}>{item.price}</p>
+                    </li>
+                  }
+                </ul>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <button
           ref={prevRef}
@@ -193,103 +101,58 @@ export function Product({ isSwiper, isSale }) {
 
   return (
     <ul className={classes.productList}>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
-      <li>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          <IconComponent
-            className={classes.cart}
-            data-image="cart"
-            dataProps={dataProps}
-            role="button"
-          />
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </li>
+      {data.map((item) => {
+        return (
+          <li key={item.id}>
+            <div className={classes.productImg}>
+              <img alt={item.image.alt} src={item.image.thumbnail} />
+              <IconComponent
+                className={classes.cart}
+                data-image="cart"
+                datadata={datadata}
+                role="button"
+              />
+            </div>
+            <ul className={classes.productInfo}>
+              <li>샛별배송</li>
+              <li className={classes.name}>{item.name}</li>
+              {item.salePrice ?
+                <li className={classes.discount}>
+                  <p className={classes.discountRate}>
+                    <A11yHidden>할인율</A11yHidden> {`${item.discount * 100}%`}
+                  </p>
+                  <p className={classes.salePrice}>
+                    <A11yHidden>할인가</A11yHidden> {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                  </p>
+                  <p className={classes.price}>
+                    <A11yHidden>정상가</A11yHidden> {`${item.price.toLocaleString('ko-KR')}원`}
+                  </p>
+                </li>
+                :
+                <li className={classes.discount}>
+                  <p className={classes.salePrice}>{item.price}</p>
+                </li>
+              }
+              <li className={classes.description}>{item.description}</li>
+              <li className={classes.icon}>
+                <span className={classes.karly}>
+                  {item.badge.karly ? 'Karly Only' : ''}
+                </span>
+                <span className={classes.limit}>
+                  {item.badge.limit ? '한정수량' : ''}
+                </span>
+              </li>
+            </ul>
+          </li>
+        );
+      })}
     </ul>
   );
 }
 
-/* Props -------------------------------------------------------------------- */
+/* data -------------------------------------------------------------------- */
 
-Product.defaultProps = {
+Product.defaultdata = {
   isSwiper: false,
   isSale: false,
 };

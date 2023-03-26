@@ -1,5 +1,4 @@
 import classes from './ProductList.module.css';
-
 import {
   Container,
   Product,
@@ -91,7 +90,7 @@ export default function ProductList() {
           </li>
         </ul>
         <div className={classes.product}>
-          <span>총 284건</span>
+          <span>{`총 1건`}</span>
           <ul className={classes.orderby}>
             <li>
               <button type="button">추천순</button>

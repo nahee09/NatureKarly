@@ -9,6 +9,8 @@ export * from './Container/Container';
 export * from './Nav/Nav';
 export * from './Label/Label';
 export * from './Title/Title';
+export * from './Tag/Tag';
+export * from './Layout/Layout';
 
 /* ------------------------------- 내부 링크 이동 리스트 ------------------------------ */
 export * from './InternalLinkMove/InternalLinkMove';
