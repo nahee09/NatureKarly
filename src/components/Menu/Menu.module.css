@@ -41,12 +41,21 @@
   height: 1.5rem;
   display: flex;
   align-items: center;
-  padding: .5rem 0 .5rem .75rem;
+  padding: .5rem 0 .5rem 2.75rem;
   text-decoration: none;
   color: var(--color-content);
 }
 
-.menuList a:hover{
-  color: var(--color-primary);
+.menuItem{
+  display: flex;
+  position: relative;
+}
+
+.menuItem a{
+  width: 100%;
+}
+
+.menuItem a:hover{
   background-color: var(--color-gray-100);
+  color: var(--color-primary);
 }
