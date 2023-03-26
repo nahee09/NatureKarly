@@ -21,6 +21,7 @@ export function RepwInput({
     <input
       className={combineClassName}
       id={useId}
+      maxLength="16"
       placeholder={placeholder}
       type="password"
       value={repw}

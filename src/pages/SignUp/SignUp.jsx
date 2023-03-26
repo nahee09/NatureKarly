@@ -26,6 +26,13 @@ import { PhoneInput } from '@/components/Input/General/PhoneInput';
 import { PwInput } from '@/components/Input/General/PwInput';
 import { RepwInput } from '@/components/Input/General/RepwInput';
 import { GenderInput } from '@/components/Input/Radio/GenderInput';
+import { BirthValidation } from '@/components/InputValidation/Birth/BirthValidation';
+import { EmailValidation } from '@/components/InputValidation/Email/EmailValidation';
+import { IdValidation } from '@/components/InputValidation/Id/IdValidation';
+import { NameValidation } from '@/components/InputValidation/Name/NameValidation';
+import { PasswordValidation } from '@/components/InputValidation/Password/passwordValidation';
+import { PhoneValidation } from '@/components/InputValidation/Phone/PhoneValidation';
+import { RePasswordValidation } from '@/components/InputValidation/RePassword/RePasswordValidation';
 import { useDocumentTitle } from '@/hook/useDocumentTitle';
 
 export function SignUp() {
@@ -158,15 +165,19 @@ export function SignUp() {
               >
                 아이디
               </Label>
-              <IdInput
-                className={classes.idInput}
-                id={idId}
-                placeholder="아이디를 입력해주세요"
-                onChange={handleIdInput}
-              />
+              <div className={classes.idInputWrapper}>
+                <IdInput
+                  className={classes.idInput}
+                  id={idId}
+                  placeholder="아이디를 입력해주세요"
+                  onChange={handleIdInput}
+                />
+                <IdValidation className={classes.idValidation} />
+              </div>
               <Button isSecondary className={classes.idButton}>
                 중복확인
               </Button>
+
               <Label
                 className={classes.pwLabel}
                 htmlFor={passwordId}
@@ -174,12 +185,16 @@ export function SignUp() {
               >
                 비밀번호
               </Label>
-              <PwInput
-                className={classes.pwInput}
-                id={passwordId}
-                placeholder="비밀번호를 입력해주세요"
-                onChange={handlePwInput}
-              />
+              <div className={classes.pwInputWrapper}>
+                <PwInput
+                  className={classes.pwInput}
+                  id={passwordId}
+                  placeholder="비밀번호를 입력해주세요"
+                  onChange={handlePwInput}
+                />
+                <PasswordValidation className={classes.pwValidation} />
+              </div>
+
               <Label
                 className={classes.repwLabel}
                 htmlFor={rePasswordId}
@@ -187,12 +202,16 @@ export function SignUp() {
               >
                 비밀번호 확인
               </Label>
-              <RepwInput
-                className={classes.repwInput}
-                id={rePasswordId}
-                placeholder="비밀번호를 한번 더 입력해주세요"
-                onChange={handleRepwInput}
-              />
+              <div className={classes.repwInputWrapper}>
+                <RepwInput
+                  className={classes.repwInput}
+                  id={rePasswordId}
+                  placeholder="비밀번호를 한번 더 입력해주세요"
+                  onChange={handleRepwInput}
+                />
+                <RePasswordValidation className={classes.repwValidation} />
+              </div>
+
               <Label
                 className={classes.nameLabel}
                 htmlFor={nameId}
@@ -200,12 +219,16 @@ export function SignUp() {
               >
                 이름
               </Label>
-              <NameInput
-                className={classes.nameInput}
-                id={nameId}
-                placeholder="이름을 입력해주세요"
-                onChange={handleNameInput}
-              />
+              <div className={classes.nameInputWrapper}>
+                <NameInput
+                  className={classes.nameInput}
+                  id={nameId}
+                  placeholder="이름을 입력해주세요"
+                  onChange={handleNameInput}
+                />
+                <NameValidation className={classes.nameValidation} />
+              </div>
+
               <Label
                 className={classes.emailLabel}
                 htmlFor={emailId}
@@ -213,15 +236,19 @@ export function SignUp() {
               >
                 이메일
               </Label>
-              <EmailInput
-                className={classes.emailInput}
-                id={emailId}
-                placeholder="예) marketkarly@karly.com"
-                onChange={handleEmailInput}
-              />
+              <div className={classes.emailInputWrapper}>
+                <EmailInput
+                  className={classes.emailInput}
+                  id={emailId}
+                  placeholder="예) marketkarly@karly.com"
+                  onChange={handleEmailInput}
+                />
+                <EmailValidation className={classes.emailValidation} />
+              </div>
               <Button isSecondary className={classes.emailButton}>
                 중복확인
               </Button>
+
               <Label
                 className={classes.phoneLabel}
                 htmlFor={phoneId}
@@ -229,15 +256,19 @@ export function SignUp() {
               >
                 휴대폰
               </Label>
-              <PhoneInput
-                className={classes.phoneInput}
-                id={phoneId}
-                placeholder="숫자만 입력해주세요"
-                onChange={handlePhoneInput}
-              />
+              <div className={classes.phoneInputWrapper}>
+                <PhoneInput
+                  className={classes.phoneInput}
+                  id={phoneId}
+                  placeholder="숫자만 입력해주세요"
+                  onChange={handlePhoneInput}
+                />
+                <PhoneValidation className={classes.phoneValidation} />
+              </div>
               <Button isSecondary className={classes.phoneButton}>
                 인증번호 받기
               </Button>
+
               <Label
                 className={classes.addressLabel}
                 htmlFor={addressId}
@@ -248,6 +279,7 @@ export function SignUp() {
               <Button isSecondary className={classes.addressButton}>
                 주소 검색
               </Button>
+
               <Label className={classes.genderLabel} htmlFor={genderId}>
                 성별
               </Label>
@@ -295,15 +327,20 @@ export function SignUp() {
                   선택안함
                 </Label>
               </div>
+
               <Label className={classes.birthLabel} htmlFor={birthId}>
                 생년월일
               </Label>
-              <BirthInput
-                className={classes.birthInput}
-                id={birthId}
-                placeholder="YYYY / MM / DD"
-                onChange={handleBirthInput}
-              />
+              <div className={classes.birthInputWrapper}>
+                <BirthInput
+                  className={classes.birthInput}
+                  id={birthId}
+                  placeholder="YYYY / MM / DD"
+                  onChange={handleBirthInput}
+                />
+                <BirthValidation className={classes.birthValidation} />
+              </div>
+
               <Label
                 className={classes.additionalLabel}
                 htmlFor={additionalInputId}
@@ -374,6 +411,7 @@ export function SignUp() {
                 </Fragment>
               ))}
             </div>
+
             <Button className={classes.submit}>가입하기</Button>
           </Fieldset>
         </form>

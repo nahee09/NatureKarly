@@ -1,0 +1,6 @@
+.idValidation.invalid {
+  color: red;
+}
+.idValidation.valid {
+  color: #25e09a;
+}

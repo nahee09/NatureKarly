@@ -20,6 +20,7 @@ export function EmailInput({
     <input
       className={combineClassName}
       id={useId}
+      maxLength="50"
       placeholder={placeholder}
       type="email"
       value={email}

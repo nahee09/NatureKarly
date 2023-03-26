@@ -20,6 +20,7 @@ export function PhoneInput({
     <input
       className={combineClassName}
       id={useId}
+      maxLength="11"
       placeholder={placeholder}
       type="tel"
       value={phone}

@@ -29,16 +29,16 @@
   border-bottom: 2px solid var(--color-black);
   display: grid;
   grid-template:
-    'id-label         id-input id-input                         id-button' 45px
-    'pw-label         pw-input pw-input                         .' 45px
-    'repw-label       repw-input repw-input                     .' 45px
-    'name-label       name-input name-input                     .' 45px
-    'email-label      email-input email-input                   email-button' 45px
-    'phone-label      phone-input phone-input                   phone-button' 45px
+    'id-label         id-input-wrapper id-input-wrapper         id-button' 45px
+    'pw-label         pw-input-wrapper pw-input-wrapper         .' 45px
+    'repw-label       repw-input-wrapper repw-input-wrapper     .' 45px
+    'name-label       name-input-wrapper name-input-wrapper     .' 45px
+    'email-label      email-input-wrapper email-input-wrapper   email-button' 45px
+    'phone-label      phone-input-wrapper phone-input-wrapper   phone-button' 45px
     'address-label    address-button address-button             .' 45px
-    'gender-label     gender-Wrapper gender-Wrapper         .' 45px
-    'birth-label      birth-input birth-input                   .' 45px
-    'additional-label additional-Wrapper additional-Wrapper .' 45px
+    'gender-label     gender-Wrapper gender-Wrapper             .' 45px
+    'birth-label      birth-input-wrapper birth-input-wrapper   .' 45px
+    'additional-label additional-Wrapper additional-Wrapper     .' 45px
     / 124px auto 360px 143px;
   gap: 30px 10px;
 }
@@ -68,12 +68,38 @@
 }
 
 /* -------------------------------------------------------------------------- */
+
+.idInput,
+.pwInput,
+.repwInput,
+.nameInput,
+.emailInput,
+.phoneInput,
+.birthInput {
+  height: 45px;
+}
+
+.idValidation,
+.pwValidation,
+.repwValidation,
+.nameValidation,
+.emailValidation,
+.phoneValidation,
+.birthValidation {
+  font-size: var(--font-sm);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
 .idLabel {
   grid-area: id-label;
 }
 
-.idInput {
-  grid-area: id-input;
+.idInputWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: id-input-wrapper;
+  gap: 5px;
 }
 
 .idButton {
@@ -85,8 +111,11 @@
   grid-area: pw-label;
 }
 
-.pwInput {
-  grid-area: pw-input;
+.pwInputWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: pw-input-wrapper;
+  gap: 5px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -94,8 +123,11 @@
   grid-area: repw-label;
 }
 
-.repwInput {
-  grid-area: repw-input;
+.repwInputWrapper {
+  grid-area: repw-input-wrapper;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -103,8 +135,11 @@
   grid-area: name-label;
 }
 
-.nameInput {
-  grid-area: name-input;
+.nameInputWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: name-input-wrapper;
+  gap: 5px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -112,8 +147,11 @@
   grid-area: email-label;
 }
 
-.emailInput {
-  grid-area: email-input;
+.emailInputWrapper {
+  grid-area: email-input-wrapper;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 }
 
 .emailButton {
@@ -125,8 +163,11 @@
   grid-area: phone-label;
 }
 
-.phoneInput {
-  grid-area: phone-input;
+.phoneInputWrapper {
+  grid-area: phone-input-wrapper;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 }
 
 .phoneButton {
@@ -168,7 +209,7 @@
   grid-area: gender-Wrapper;
   display: flex;
   flex-flow: row nowrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .maleInput {
@@ -187,8 +228,14 @@
 }
 
 .birthInput {
-  grid-area: birth-input;
   text-align: center;
+}
+
+.birthInputWrapper {
+  grid-area: birth-input-wrapper;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 }
 
 /* -------------------------------------------------------------------------- */

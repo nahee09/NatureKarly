@@ -1,0 +1,6 @@
+.nameValidation.invalid {
+  color: red;
+}
+.nameValidation.valid {
+  color: #25e09a;
+}

@@ -20,6 +20,7 @@ export function NameInput({
     <input
       className={combineClassName}
       id={useId}
+      maxLength="40"
       placeholder={placeholder}
       type="text"
       value={name}

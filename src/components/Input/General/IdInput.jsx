@@ -20,6 +20,7 @@ export function IdInput({
     <input
       className={combineClassName}
       id={useId}
+      maxLength="20"
       placeholder={placeholder}
       type="text"
       value={id}
