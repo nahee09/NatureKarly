@@ -1,8 +1,4 @@
-footer{
-  margin-top: 1400px;
-}
-
-.footerInner{
+.footerInner {
   display: flex;
   justify-content: space-between;
   padding-top: 1.75rem;
@@ -10,44 +6,44 @@ footer{
 
 /* customerService 섹션 */
 
-.customerService{
+.customerService {
   height: 22.3125rem;
 }
 
-.customerService h2{
+.customerService h2 {
   font-size: 1.3313rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.serviceNumber{
+.serviceNumber {
   display: flex;
   align-items: center;
 }
 
-.serviceNumber b{
+.serviceNumber b {
   font-size: 2.375rem;
   font-weight: 700;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
-.serviceNumber .firstSpan{
+.serviceNumber .firstSpan {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.inquiry{
+.inquiry {
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.inquiry li{
+.inquiry li {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.inquiry li > button{
+.inquiry li > button {
   color: black;
   height: 2.5rem;
   width: 8.75rem;
@@ -60,12 +56,12 @@ footer{
   background: none;
 }
 
-.customerService span{
+.customerService span {
   font-size: 0.75rem;
   font-weight: 400;
 }
 
-.customerService a{
+.customerService a {
   text-decoration: none;
   color: var(--color-primary);
   font-size: 0.75rem;
@@ -74,14 +70,14 @@ footer{
 
 /* about섹션  */
 
-.about{
+.about {
   width: 30.375rem;
   height: 14.125rem;
   font-size: 0.75rem;
   font-weight: 400;
 }
 
-.about .footerNavigation{
+.about .footerNavigation {
   display: flex;
   gap: 0.85rem;
   margin-bottom: 1.75rem;
@@ -90,32 +86,32 @@ footer{
   line-height: 160%;
 }
 
-.ariaSpan{
-  margin: 0 .5rem;
+.ariaSpan {
+  margin: 0 0.5rem;
 }
 
-.about p{
+.about p {
   height: 1.1875rem;
 }
 
-.about a{
+.about a {
   text-decoration: none;
   color: var(--color-primary);
 }
 
-.snsList{
+.snsList {
   display: flex;
   margin-top: 1.75rem;
   gap: 1.25rem;
 }
 
 .snsList a,
-.snsList img{
+.snsList img {
   width: 100%;
 }
 
 /* middle */
-.aboutMiddleList{
+.aboutMiddleList {
   display: flex;
   border-top: 1px solid var(--color-gray-100);
   padding: 1.5rem 0 2rem;
@@ -124,24 +120,22 @@ footer{
   font-size: 0.625rem;
 }
 
-.aboutMiddleList li{
+.aboutMiddleList li {
   display: flex;
 }
 
-
-.aboutMiddleList div:first-child{
+.aboutMiddleList div:first-child {
   margin-right: 0.5rem;
 }
 
-
-.footerBottom{
+.footerBottom {
   background-color: var(--color-gray-50);
-  font-size: .625rem;
+  font-size: 0.625rem;
   font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 160%;
-  padding: 1.25rem .25rem 2rem;
+  padding: 1.25rem 0.25rem 2rem;
   height: 3.5rem;
 }
