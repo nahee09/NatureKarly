@@ -3,4 +3,19 @@
   flex-flow: column nowrap;
   gap: 2.5rem;
   max-width: 65.625rem;
+  margin: 0 auto;
+}
+
+.zIndex {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.productReview {
+  margin-bottom: 4.5rem;
+}
+
+.productInquiry {
+  margin-bottom: 6rem;
 }
