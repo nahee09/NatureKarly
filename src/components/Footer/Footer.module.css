@@ -1,0 +1,147 @@
+footer{
+  margin-top: 1400px;
+}
+
+.footerInner{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.75rem;
+}
+
+/* customerService 섹션 */
+
+.customerService{
+  height: 22.3125rem;
+}
+
+.customerService h2{
+  font-size: 1.3313rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.serviceNumber{
+  display: flex;
+  align-items: center;
+}
+
+.serviceNumber b{
+  font-size: 2.375rem;
+  font-weight: 700;
+  margin-right: .5rem;
+}
+
+.serviceNumber .firstSpan{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.inquiry{
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.inquiry li{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inquiry li > button{
+  color: black;
+  height: 2.5rem;
+  width: 8.75rem;
+  border: 1px solid var(--color-gray-200);
+  font-weight: 400;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.customerService span{
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.customerService a{
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* about섹션  */
+
+.about{
+  width: 30.375rem;
+  height: 14.125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.about .footerNavigation{
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.ariaSpan{
+  margin: 0 .5rem;
+}
+
+.about p{
+  height: 1.1875rem;
+}
+
+.about a{
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.snsList{
+  display: flex;
+  margin-top: 1.75rem;
+  gap: 1.25rem;
+}
+
+.snsList a,
+.snsList img{
+  width: 100%;
+}
+
+/* middle */
+.aboutMiddleList{
+  display: flex;
+  border-top: 1px solid var(--color-gray-100);
+  padding: 1.5rem 0 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+
+.aboutMiddleList li{
+  display: flex;
+}
+
+
+.aboutMiddleList div:first-child{
+  margin-right: 0.5rem;
+}
+
+
+.footerBottom{
+  background-color: var(--color-gray-50);
+  font-size: .625rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 160%;
+  padding: 1.25rem .25rem 2rem;
+  height: 3.5rem;
+}

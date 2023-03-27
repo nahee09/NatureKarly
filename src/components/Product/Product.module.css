@@ -1,5 +1,17 @@
+.productList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.125rem;
+}
+
 .productImg {
+  position: relative;
   margin-bottom: 1rem;
+  font-size: 0;
+}
+
+.productInfo {
+  margin-bottom: 5.6875rem;
 }
 
 .productInfo li {
@@ -20,7 +32,7 @@
   color: var(--color-content);
 }
 
-.discountRate {
+.saleRatioRate {
   display: inline-block;
   font-weight: 600;
   font-size: var(--font-lg);
@@ -46,9 +58,32 @@
   text-decoration: line-through;
 }
 
-.summary {
+.description {
   font-weight: 400;
   font-size: var(--font-sm);
   color: var(--color-gray-400);
   line-height: var(--line-height-lg);
+}
+
+.cart {
+  position: absolute;
+  right: 0.9375rem;
+  bottom: 1.0625rem;
+  cursor: pointer;
+}
+
+.icon > span{
+  padding: 0.25rem;
+  font-size: var(--font-sm);
+  border-radius: var(--border-radius-default);
+  margin-right: 0.5rem;
+}
+
+.karly{
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.limit{
+  background: var(--color-gray-100);
 }

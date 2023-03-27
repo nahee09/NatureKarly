@@ -1,0 +1,9 @@
+.detailDescription {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.productTable {
+  width: 100%;
+  border-top: 2px solid var(--color-black);
+}

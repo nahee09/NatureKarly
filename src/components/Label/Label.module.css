@@ -1,7 +1,6 @@
 .label {
-  font-size: var(--font-md);
-  color: var(--color-content);
   font-weight: 600;
+  color: var(--color-content);
   line-height: var(--line-height-md);
   width: 100%;
   display: flex;
@@ -32,4 +31,29 @@
   width: 0.5625rem;
   height: 0.4375rem;
   margin-left: 0.125rem;
+}
+
+.Small {
+  font-size: var(--font-sm);
+  font-weight: 400;
+}
+
+.Medium {
+  font-size: var(--font-md);
+  font-weight: 400;
+}
+
+.Large {
+  font-size: var(--font-lg);
+  font-weight: 500;
+}
+
+.XL {
+  font-size: var(--font-xl);
+  font-weight: 600;
+}
+
+.XXL {
+  font-size: var(--font-xxl);
+  font-weight: 600;
 }

@@ -1,0 +1,56 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.Counter {
+  border: 1px solid var(--color-gray-200);
+  text-align: center;
+}
+
+.Counter input,
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.Counter button {
+  width: 30px;
+  height: 30px;
+}
+
+.MinusButton {
+  background: url('../../assets/icons/Icon/cart/minusDisabled=false.svg');
+}
+
+.DisabledMinusButton {
+  background: url(../../assets/icons/Icon/cart/minusDisabled=true.svg);
+}
+
+.PlusButton {
+  background: url('../../assets/icons/Icon/cart/plusDisabled=false.svg');
+}
+
+.CountInput {
+  width: 24px;
+  vertical-align: -5px;
+  text-align: center;
+  color: var(--color-black);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: 29px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

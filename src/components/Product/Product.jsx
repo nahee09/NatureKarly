@@ -1,70 +1,172 @@
+import {
+  useRef,
+  useEffect,
+  // useLayoutEffect,
+} from 'react';
+
 import PropTypes from 'prop-types';
-import { SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import thumb from '../../assets/jukkumi/thumbnail.jpg';
-import { A11yHidden } from '../A11yHidden/A11yHidden';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
 import classes from './Product.module.css';
 
-function ProductDiscount(isSale) {
-  if (!isSale) {
-    return (
-      <li className={classes.discount}>
-        <p className={classes.salePrice}>4,980원</p>
-      </li>
-    );
-  }
+import { A11yHidden, IconComponent } from '@/components';
+import {
+  useReadData,
+  // useWriteBatchData ,
+} from '@/firebase/firestore';
 
-  return (
-    <li className={classes.discount}>
-      <p className={classes.discountRate}>
-        <A11yHidden>할인율</A11yHidden>24%
-      </p>
-      <p className={classes.salePrice}>
-        <A11yHidden>할인가</A11yHidden>4,980원
-      </p>
-      <p className={classes.price}>
-        <A11yHidden>정상가</A11yHidden>24,900원
-      </p>
-    </li>
-  );
-}
+// import shopData from '@/app/shop-data';
 
-export function Product({ isSwiper, isSale }) {
+export function Product({ isSwiper }) {
+  // const { writeBatchData } = useWriteBatchData('products', 'title');
+
+  // useLayoutEffect(() => {
+  //   writeBatchData(shopData);
+  // }, []);
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const datadata = { width: '45px', height: '45px' };
+
+  const { readData, data } = useReadData('products');
+
+  useEffect(() => {
+    readData();
+  }, [readData]);
+
   if (isSwiper) {
     return (
-      <SwiperSlide>
-        <div className={classes.productImg}>
-          <img alt="쭈꾸미" src={thumb} />
-          {/* 장바구니 아이콘 */}
-        </div>
-        <ul className={classes.productInfo}>
-          <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-          {ProductDiscount(isSale)}
-        </ul>
-      </SwiperSlide>
+      <div className="productSwiper">
+        <Swiper
+          modules={[Navigation]}
+          slidesPerGroup={4}
+          slidesPerView={4}
+          spaceBetween={18}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.update();
+          }}
+        >
+          {data &&
+            data.map((item) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <div className={classes.productImg}>
+                    <img alt={item.image.alt} src={item.image.thumbnail} />
+                    <IconComponent
+                      className={classes.cart}
+                      data-image="cart"
+                      datadata={datadata}
+                      role="button"
+                    />
+                  </div>
+                  <ul className={classes.productInfo}>
+                    <li className={classes.name}>{item.name}</li>
+                    {item.salePrice ? (
+                      <li className={classes.saleRatio}>
+                        <p className={classes.saleRatioRate}>
+                          <A11yHidden>할인율</A11yHidden>{' '}
+                          {`${item.saleRatio * 100}%`}
+                        </p>
+                        <p className={classes.salePrice}>
+                          <A11yHidden>할인가</A11yHidden>{' '}
+                          {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                        </p>
+                        <p className={classes.price}>
+                          <A11yHidden>정상가</A11yHidden>{' '}
+                          {`${item.price.toLocaleString('ko-KR')}원`}
+                        </p>
+                      </li>
+                    ) : (
+                      <li className={classes.saleRatio}>
+                        <p className={classes.salePrice}>
+                          {`${item.price.toLocaleString('ko-KR')}원`}
+                        </p>
+                      </li>
+                    )}
+                  </ul>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+        <button
+          ref={prevRef}
+          className="swiper-button-prev"
+          type="button"
+        ></button>
+        <button
+          ref={nextRef}
+          className="swiper-button-next"
+          type="button"
+        ></button>
+      </div>
     );
   }
 
   return (
-    <>
-      <div className={classes.productImg}>
-        <img alt="쭈꾸미" src={thumb} />
-        {/* 장바구니 아이콘 */}
-      </div>
-      <ul className={classes.productInfo}>
-        <li className={classes.delivery}>샛별배송</li>
-        <li className={classes.name}>[풀무원]탱탱쫄면 (4개입)</li>
-        {ProductDiscount(isSale)}
-        <li className={classes.summary}>CJ즉석밥 고소한 맛의 발아 현미밥</li>
-      </ul>
-    </>
+    <ul className={classes.productList}>
+      {data &&
+        data.map((item) => {
+          return (
+            <li key={item.id}>
+              <div className={classes.productImg}>
+                <img alt={item.image.alt} src={item.image.thumbnail} />
+                <IconComponent
+                  className={classes.cart}
+                  data-image="cart"
+                  datadata={datadata}
+                  role="button"
+                />
+              </div>
+              <ul className={classes.productInfo}>
+                <li className={classes.delivery}>샛별배송</li>
+                <li className={classes.name}>{item.name}</li>
+                {item.salePrice ? (
+                  <li className={classes.saleRatio}>
+                    <p className={classes.saleRatioRate}>
+                      <A11yHidden>할인율</A11yHidden>{' '}
+                      {`${item.saleRatio * 100}%`}
+                    </p>
+                    <p className={classes.salePrice}>
+                      <A11yHidden>할인가</A11yHidden>{' '}
+                      {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                    </p>
+                    <p className={classes.price}>
+                      <A11yHidden>정상가</A11yHidden>{' '}
+                      {`${item.price.toLocaleString('ko-KR')}원`}
+                    </p>
+                  </li>
+                ) : (
+                  <li className={classes.saleRatio}>
+                    <p className={classes.salePrice}>
+                      {`${item.price.toLocaleString('ko-KR')}원`}
+                    </p>
+                  </li>
+                )}
+                <li className={classes.description}>{item.description}</li>
+                <li className={classes.icon}>
+                  {item.badge.karly ? <span className={classes.karly}>Karly Only</span> : ''}
+                  {item.badge.limit ? <span className={classes.limit}>한정수량</span>: '' }
+                </li>
+              </ul>
+            </li>
+          );
+        })}
+    </ul>
   );
 }
 
-/* Props -------------------------------------------------------------------- */
+/* data -------------------------------------------------------------------- */
 
-Product.defaultProps = {
+Product.defaultdata = {
   isSwiper: false,
   isSale: false,
 };

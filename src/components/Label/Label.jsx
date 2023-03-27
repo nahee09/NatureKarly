@@ -22,17 +22,15 @@ const getFontSize = (variable) => {
 /* ----------------------------------------------------------------------- */
 
 export function Label({
-  className,
   htmlFor,
-  fontSize,
   isEssential,
   invisibleLabel,
-  children,
+  labelStyle,
   ...restProps
 }) {
-  const combineClassNames = `${classes.label} ${classEssential(
-    isEssential
-  )} ${className}`.trim();
+  const combineClassNames = `${classes.label} ${
+    classes[labelStyle]
+  } ${classEssential(isEssential)}`.trim();
   if (!invisibleLabel) {
     return (
       <label
@@ -60,6 +58,7 @@ Label.defaultProps = {
   fontSize: 'md',
   isEssential: 'none',
   invisibleLabel: false,
+  labelStyle: 'Medium',
 };
 
 Label.propTypes = {
@@ -67,4 +66,5 @@ Label.propTypes = {
   fontSize: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', 'xxl', 'xxxl']),
   isEssential: PropTypes.oneOf(['none', 'left', 'right']),
   invisibleLabel: PropTypes.bool,
+  labelStyle: PropTypes.oneOf(['Small', 'Medium', 'Large', 'XL', 'XXL']),
 };

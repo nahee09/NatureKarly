@@ -1,0 +1,16 @@
+.navSide{
+  width: 13%;
+  height: 1.6875rem;
+  line-height: 1.6875rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-content);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.navSide span:first-child{
+  color: var(--color-primary);
+}

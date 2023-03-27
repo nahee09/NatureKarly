@@ -1,0 +1,31 @@
+.title {
+  line-height: var(--line-height-sm);
+  text-align: center;
+  color: var(--color-content);
+  margin: 1.75rem 0;
+}
+
+.Medium {
+  font-size: var(--font-md);
+  font-weight: 600;
+}
+
+.Large {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+
+.XL {
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
+.XXL {
+  font-size: var(--font-xxl);
+  font-weight: 700;
+}
+
+.XXL {
+  font-size: var(--font-xxxl);
+  font-weight: 700;
+}

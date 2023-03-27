@@ -13,11 +13,12 @@ const firebaseConfig = {
   apiKey: VITE_API_KEY,
   authDomain: VITE_AUTH_DOMAIN,
   projectId: VITE_PROJECT_ID,
-  storageBucket: VITE_STORAGE_BUCKET,
-  messagingSenderId: VITE_MESSAGE_SENDER_ID,
+  storageBucket: VITE_MESSAGE_SENDER_ID,
+  messagingSenderId: VITE_STORAGE_BUCKET,
   appId: VITE_APP_ID,
 };
 
-console.log(firebaseConfig);
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
 
-export const app = initializeApp(firebaseConfig);
+export default firebaseApp;
