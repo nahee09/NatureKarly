@@ -1,8 +1,30 @@
+import { useState } from 'react';
+
 import { string, node } from 'prop-types';
 
+import { useRecoilState } from 'recoil';
+
 import classes from './ProductPopUpContent.module.css';
+import { contentText } from '@/@store/popUpTextState';
 
 export function ProductPopUpContent({ textName, content }) {
+  const [visible, setVisible] = useState(true);
+  const [text, setText] = useRecoilState(contentText);
+
+  function visiblePlaceHolder() {
+    if (visible && text.length < 1) {
+      return <div className={classes.textPlaceHolder}>{content}</div>;
+    }
+  }
+
+  function visibleText() {
+    setVisible(!visible);
+  }
+
+  function getText(e) {
+    setText(e.target.value);
+  }
+
   return (
     <div className={classes.textWrapper}>
       <textarea
@@ -10,8 +32,10 @@ export function ProductPopUpContent({ textName, content }) {
         id={textName}
         maxLength="5000"
         name={textName}
+        onChange={getText}
+        onClick={visibleText}
       ></textarea>
-      <div className={classes.textPlaceHolder}>{content}</div>
+      {visiblePlaceHolder()}
     </div>
   );
 }

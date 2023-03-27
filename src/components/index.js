@@ -8,6 +8,9 @@ export * from './Input/Input';
 export * from './Container/Container';
 export * from './Nav/Nav';
 export * from './Label/Label';
+export * from './Container/Container';
+export * from './Tag/Tag';
+export * from './ModalWindow/ModalWindow';
 export * from './Title/Title';
 export * from './Counter/Counter'
 
@@ -43,6 +46,5 @@ export * from './NormalNoticeContent/NormalNoticeContent';
 export * from './InquiryTitle/InquiryTitle';
 export * from './InquiryQuestion/InquiryQuestion';
 export * from './InquiryAnswer/InquiryAnswer';
-export * from './Tag/Tag'
+export * from './ReviewWriteButton/ReviewWriteButton';
 
-/* ------------------------------- 후기 및 문의 테이블 ------------------------------ */

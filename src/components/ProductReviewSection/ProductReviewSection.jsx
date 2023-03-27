@@ -5,6 +5,8 @@ import {
   ProductTable,
   PageMoveButtons,
   ProductReviewTable,
+  ModalWindow,
+  ProductReviewPopUp,
 } from '..';
 
 import classes from './ProductReviewSection.module.css';
@@ -43,6 +45,9 @@ export function ProductReviewSection() {
       />
 
       <PageMoveButtons />
+      <ModalWindow modalId="reviewModal">
+        <ProductReviewPopUp tabIndex={0} />
+      </ModalWindow>
     </>
   );
 }
