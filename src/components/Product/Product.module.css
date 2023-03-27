@@ -7,6 +7,7 @@
 .productImg {
   position: relative;
   margin-bottom: 1rem;
+  font-size: 0;
 }
 
 .productInfo {
@@ -31,7 +32,7 @@
   color: var(--color-content);
 }
 
-.discountRate {
+.saleRatioRate {
   display: inline-block;
   font-weight: 600;
   font-size: var(--font-lg);

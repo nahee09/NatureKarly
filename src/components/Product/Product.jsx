@@ -1,4 +1,8 @@
-import { useRef, useLayoutEffect, useState } from 'react';
+import {
+  useRef,
+  useEffect,
+  // useLayoutEffect,
+} from 'react';
 
 import PropTypes from 'prop-types';
 import { Navigation } from 'swiper';
@@ -9,27 +13,29 @@ import 'swiper/css/navigation';
 import classes from './Product.module.css';
 
 import { A11yHidden, IconComponent } from '@/components';
-import { useReadData } from '@/firebase/firestore';
+import {
+  useReadData,
+  // useWriteBatchData ,
+} from '@/firebase/firestore';
+
+// import shopData from '@/app/shop-data';
 
 export function Product({ isSwiper }) {
+  // const { writeBatchData } = useWriteBatchData('products', 'title');
+
+  // useLayoutEffect(() => {
+  //   writeBatchData(shopData);
+  // }, []);
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const datadata = { width: '45px', height: '45px' };
 
-  const { readData, data, isLoading, error } = useReadData('products');
+  const { readData, data } = useReadData('products');
 
-  // useLayoutEffect(() => {
-  //   const db = getFirestore(firebaseApp);
-  //   const productsRef = collection(db, 'products');
-
-  //   getDocs(productsRef).then((res) => {
-  //     const data = [];
-  //     res.forEach(async (data) => {
-  //       data.push(data.data());
-  //     });
-  //     setdata(data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    readData();
+  }, [readData]);
 
   if (isSwiper) {
     return (
@@ -49,41 +55,47 @@ export function Product({ isSwiper }) {
             swiper.navigation.update();
           }}
         >
-          {data.map((item) => {
-            return (
-              <SwiperSlide key={item.id}>
-                <div className={classes.productImg}>
-                  <img alt={item.image.alt} src={item.image.thumbnail} />
-                  <IconComponent
-                    className={classes.cart}
-                    data-image="cart"
-                    datadata={datadata}
-                    role="button"
-                  />
-                </div>
-                <ul className={classes.productInfo}>
-                  <li className={classes.name}>{item.name}</li>
-                  {item.salePrice ?
-                    <li className={classes.discount}>
-                      <p className={classes.discountRate}>
-                        <A11yHidden>할인율</A11yHidden> {`${item.discount * 100}%`}
-                      </p>
-                      <p className={classes.salePrice}>
-                        <A11yHidden>할인가</A11yHidden> {`${item.salePrice.toLocaleString('ko-KR')}원`}
-                      </p>
-                      <p className={classes.price}>
-                        <A11yHidden>정상가</A11yHidden> {`${item.price.toLocaleString('ko-KR')}원`}
-                      </p>
-                    </li>
-                    :
-                    <li className={classes.discount}>
-                      <p className={classes.salePrice}>{item.price}</p>
-                    </li>
-                  }
-                </ul>
-              </SwiperSlide>
-            );
-          })}
+          {data &&
+            data.map((item) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <div className={classes.productImg}>
+                    <img alt={item.image.alt} src={item.image.thumbnail} />
+                    <IconComponent
+                      className={classes.cart}
+                      data-image="cart"
+                      datadata={datadata}
+                      role="button"
+                    />
+                  </div>
+                  <ul className={classes.productInfo}>
+                    <li className={classes.name}>{item.name}</li>
+                    {item.salePrice ? (
+                      <li className={classes.saleRatio}>
+                        <p className={classes.saleRatioRate}>
+                          <A11yHidden>할인율</A11yHidden>{' '}
+                          {`${item.saleRatio * 100}%`}
+                        </p>
+                        <p className={classes.salePrice}>
+                          <A11yHidden>할인가</A11yHidden>{' '}
+                          {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                        </p>
+                        <p className={classes.price}>
+                          <A11yHidden>정상가</A11yHidden>{' '}
+                          {`${item.price.toLocaleString('ko-KR')}원`}
+                        </p>
+                      </li>
+                    ) : (
+                      <li className={classes.saleRatio}>
+                        <p className={classes.salePrice}>
+                          {`${item.price.toLocaleString('ko-KR')}원`}
+                        </p>
+                      </li>
+                    )}
+                  </ul>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
         <button
           ref={prevRef}
@@ -101,51 +113,53 @@ export function Product({ isSwiper }) {
 
   return (
     <ul className={classes.productList}>
-      {data.map((item) => {
-        return (
-          <li key={item.id}>
-            <div className={classes.productImg}>
-              <img alt={item.image.alt} src={item.image.thumbnail} />
-              <IconComponent
-                className={classes.cart}
-                data-image="cart"
-                datadata={datadata}
-                role="button"
-              />
-            </div>
-            <ul className={classes.productInfo}>
-              <li>샛별배송</li>
-              <li className={classes.name}>{item.name}</li>
-              {item.salePrice ?
-                <li className={classes.discount}>
-                  <p className={classes.discountRate}>
-                    <A11yHidden>할인율</A11yHidden> {`${item.discount * 100}%`}
-                  </p>
-                  <p className={classes.salePrice}>
-                    <A11yHidden>할인가</A11yHidden> {`${item.salePrice.toLocaleString('ko-KR')}원`}
-                  </p>
-                  <p className={classes.price}>
-                    <A11yHidden>정상가</A11yHidden> {`${item.price.toLocaleString('ko-KR')}원`}
-                  </p>
+      {data &&
+        data.map((item) => {
+          return (
+            <li key={item.id}>
+              <div className={classes.productImg}>
+                <img alt={item.image.alt} src={item.image.thumbnail} />
+                <IconComponent
+                  className={classes.cart}
+                  data-image="cart"
+                  datadata={datadata}
+                  role="button"
+                />
+              </div>
+              <ul className={classes.productInfo}>
+                <li className={classes.delivery}>샛별배송</li>
+                <li className={classes.name}>{item.name}</li>
+                {item.salePrice ? (
+                  <li className={classes.saleRatio}>
+                    <p className={classes.saleRatioRate}>
+                      <A11yHidden>할인율</A11yHidden>{' '}
+                      {`${item.saleRatio * 100}%`}
+                    </p>
+                    <p className={classes.salePrice}>
+                      <A11yHidden>할인가</A11yHidden>{' '}
+                      {`${item.salePrice.toLocaleString('ko-KR')}원`}
+                    </p>
+                    <p className={classes.price}>
+                      <A11yHidden>정상가</A11yHidden>{' '}
+                      {`${item.price.toLocaleString('ko-KR')}원`}
+                    </p>
+                  </li>
+                ) : (
+                  <li className={classes.saleRatio}>
+                    <p className={classes.salePrice}>
+                      {`${item.price.toLocaleString('ko-KR')}원`}
+                    </p>
+                  </li>
+                )}
+                <li className={classes.description}>{item.description}</li>
+                <li className={classes.icon}>
+                  {item.badge.karly ? <span className={classes.karly}>Karly Only</span> : ''}
+                  {item.badge.limit ? <span className={classes.limit}>한정수량</span>: '' }
                 </li>
-                :
-                <li className={classes.discount}>
-                  <p className={classes.salePrice}>{item.price}</p>
-                </li>
-              }
-              <li className={classes.description}>{item.description}</li>
-              <li className={classes.icon}>
-                <span className={classes.karly}>
-                  {item.badge.karly ? 'Karly Only' : ''}
-                </span>
-                <span className={classes.limit}>
-                  {item.badge.limit ? '한정수량' : ''}
-                </span>
-              </li>
-            </ul>
-          </li>
-        );
-      })}
+              </ul>
+            </li>
+          );
+        })}
     </ul>
   );
 }

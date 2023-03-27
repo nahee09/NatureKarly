@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 
 import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 
-import { db } from '../database.js';
+import { db } from './index';
 
 /**
  * Firestore 데이터 읽기 훅
