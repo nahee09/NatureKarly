@@ -1,6 +1,10 @@
 import {} from 'prop-types';
 
-import { InternalLinkMoves } from '..';
+import {
+  InternalLinkMoves,
+  ProductReviewSection,
+  ProductInquirySection,
+} from '..';
 
 import classes from './InternalLinkMoveTest.module.css';
 import saladInfoImage from '@/assets/salad/detail_info.jpg';
@@ -15,10 +19,24 @@ export function InternalLinkMoveTest() {
   ];
 
   return (
-    <section className={classes.align}>
-      <InternalLinkMoves list={internalLinkList} title="상세 메뉴 리스트" />
-      <img alt="상품설명이미지" id="productDescription" src={saladViewImage} />
-      <img alt="상품상세정보이미지" id="productDetail" src={saladInfoImage} />
-    </section>
+    <>
+      <section className={classes.align}>
+        <div className={classes.zIndex}>
+          <InternalLinkMoves list={internalLinkList} title="상세 메뉴 리스트" />
+        </div>
+        <img
+          alt="상품설명이미지"
+          id="productDescription"
+          src={saladViewImage}
+        />
+        <img alt="상품상세정보이미지" id="productDetail" src={saladInfoImage} />
+        <section className={classes.productReview} id="productReview">
+          <ProductReviewSection />
+        </section>
+        <section className={classes.productInquiry} id="productInquiry">
+          <ProductInquirySection />
+        </section>
+      </section>
+    </>
   );
 }

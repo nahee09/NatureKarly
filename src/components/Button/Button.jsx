@@ -2,20 +2,18 @@ import PropTypes from 'prop-types';
 
 import classes from './Button.module.css';
 
-function calIsSecondary(isSecondary) {
+function getIsSecondary(isSecondary) {
   if (isSecondary) return 'secondary';
 
   return 'primary';
 }
-export function Button({ isSecondary, children, ...restProps }) {
+export function Button({ isSecondary, className, children, ...restProps }) {
+  const combineClassNames = `${classes.Button} ${
+    classes[getIsSecondary(isSecondary)]
+  } ${className}`.trim();
+
   return (
-    <button
-      type="button"
-      className={[classes.Button, classes[calIsSecondary(isSecondary)]].join(
-        ' '
-      )}
-      {...restProps}
-    >
+    <button className={combineClassNames} type="button" {...restProps}>
       {children}
     </button>
   );

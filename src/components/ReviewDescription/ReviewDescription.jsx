@@ -1,6 +1,6 @@
 import { array, string } from 'prop-types';
 
-import { Button } from '..';
+import { ReviewWriteButton } from '..';
 
 import classes from './ReviewDescription.module.css';
 
@@ -19,7 +19,7 @@ export function ReviewDescription({
         {description &&
           description.map((list, index) => <li key={index}>{list}</li>)}
       </ul>
-      <Button>{buttonName}</Button>
+      <ReviewWriteButton buttonName={buttonName} />
     </div>
   );
 }

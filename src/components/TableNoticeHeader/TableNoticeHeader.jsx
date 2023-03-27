@@ -1,6 +1,6 @@
 import { bool, string } from 'prop-types';
 
-import { IconComponent, Tag } from '..';
+import { IconComponent, Tag } from '@/components';
 
 import classes from './TableNoticeHeader.module.css';
 

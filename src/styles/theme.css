@@ -47,4 +47,7 @@
   --border-radius-none: 0;
   --border-radius-default: 0.25rem;
   --border-radius-md: 1rem;
+
+  /* ---------------------------- common main width --------------------------- */
+  --common-main-width: 640px;
 }
