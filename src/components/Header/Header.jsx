@@ -24,7 +24,6 @@ export default function Header({ navList: initialNavList }) {
       setIsSticky(window.scrollY >= 166);
     }
 
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -145,17 +144,8 @@ export default function Header({ navList: initialNavList }) {
         </header>
       );
     }
-}
 
-Header.defaultProps = {
-  navList: [],
 };
-
-const NavLinkType = PropTypes.exact({
-  id: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-});
 
 Header.propTypes = {
   navList: PropTypes.arrayOf(NavLinkType),

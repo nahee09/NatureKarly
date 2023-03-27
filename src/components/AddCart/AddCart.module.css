@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.AddCartBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.AddCart {
+  position: absolute;
+  width: 396px;
+  height: 292px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  background: var(--color-white);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--box-shadow-below-medium);
+}
+
+.AddCart h3 {
+  color: var(--color-content);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.AddCart p {
+  color: var(--color-content);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.Price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.Price input {
+  width: 84px;
+  height: 30px;
+}
+
+.TotalPriceTable {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.TotalPriceTable p {
+  margin-top: auto;
+}
+
+.TotalPriceTable .TotalPrice {
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
+.PointGuide {
+  margin-top: 4px;
+  text-align: right;
+}
+
+.AddCartButton {
+  margin-top: 28px;
+  display: flex;
+  gap: 8px;
+}
+
+.AddCartButton button {
+  width: 100%;
+  padding: 13px 0;
+  line-height: var(--line-height-md);
+  justify-content: center;
+  align-items: center;
+}

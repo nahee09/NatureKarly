@@ -1,0 +1,134 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.Inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.ProductDetailTable {
+  position: relative;
+  margin-top: 40px;
+}
+
+.ProductDetailTableTitle {
+  position: absolute;
+  top: 46px;
+  left: 490px;
+  color: var(--color-content);
+  font-size: var(--font-xl);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.ProductImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  margin-right: 90px;
+}
+
+.DeliveryType {
+  position: absolute;
+  top: 0;
+  left: 490px;
+  color: var(--color-gray-500);
+  font-size: var(--font-lg);
+  font-weight: 700;
+  line-height: var(--line-height-sm);
+}
+
+.ProductInformationTable {
+  position: absolute;
+  top: 93px;
+  left: 490px;
+  width: 560px;
+}
+
+.Description {
+  color: var(--color-gray-400);
+  font-size: var(--font-md);
+  font-weight: 400;
+  line-height: var(--line-height-lg);
+}
+
+.Price {
+  margin-top: 16px;
+  color: var(--color-content);
+  font-size: var(--font-xl);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.Price span {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: var(--font-md);
+  font-weight: 700;
+  line-height: var(--line-height-sm);
+  vertical-align: middle;
+}
+
+.PointGuide {
+  margin-top: 16px;
+  color: var(--color-primary);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.TotalPrice {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: end;
+  margin-top: 28px;
+}
+
+.TotalPriceText {
+  margin-right: 17px;
+  color: var(--color-black);
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-md);
+}
+
+.TotalPrice .Price {
+  margin: 0;
+}
+
+.Badge {
+  color: var(--color-black);
+  margin-top: 8px;
+  text-align: right;
+}
+
+.ProductDetailTableButton {
+  margin-top: 28px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.HeartButton,
+.AlarmButton {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background-color: none;
+  margin-right: 12px;
+}
+
+.HeartButton {
+  background: var(--color-white)
+    url('../../assets/icons/Icon/product/squreDisabled=false.svg');
+}
+
+.AlarmButton {
+  background: var(--color-white) url('../../assets/icons/Icon/product/Bell.svg');
+}
