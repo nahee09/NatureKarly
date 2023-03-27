@@ -9,6 +9,7 @@ export * from './Container/Container';
 export * from './Nav/Nav';
 export * from './Label/Label';
 export * from './Title/Title';
+export * from './Counter/Counter'
 
 /* ------------------------------- 내부 링크 이동 리스트 ------------------------------ */
 export * from './InternalLinkMove/InternalLinkMove';
@@ -42,3 +43,6 @@ export * from './NormalNoticeContent/NormalNoticeContent';
 export * from './InquiryTitle/InquiryTitle';
 export * from './InquiryQuestion/InquiryQuestion';
 export * from './InquiryAnswer/InquiryAnswer';
+export * from './Tag/Tag'
+
+/* ------------------------------- 후기 및 문의 테이블 ------------------------------ */
