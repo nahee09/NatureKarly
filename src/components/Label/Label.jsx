@@ -13,10 +13,16 @@ function classEssential(isEssential) {
 
 /* ----------------------------------------------------------------------- */
 
-export function Label({ htmlFor, isEssential, invisibleLabel, ...restProps }) {
-  const combineClassNames = `${classes.label} ${classEssential(
-    isEssential
-  )}`.trim();
+export function Label({
+  htmlFor,
+  isEssential,
+  invisibleLabel,
+  labelStyle,
+  ...restProps
+}) {
+  const combineClassNames = `${classes.label} ${
+    classes[labelStyle]
+  } ${classEssential(isEssential)}`.trim();
   if (!invisibleLabel) {
     return (
       <label className={combineClassNames} htmlFor={htmlFor} {...restProps}>
@@ -38,10 +44,12 @@ Label.defaultProps = {
   htmlFor: '',
   isEssential: false,
   invisibleLabel: false,
+  labelStyle: 'Medium',
 };
 
 Label.propTypes = {
   htmlFor: PropTypes.string,
   isEssential: PropTypes.bool,
   invisibleLabel: PropTypes.bool,
+  labelStyle: PropTypes.oneOf(['Small', 'Medium', 'Large', 'XL', 'XXL']),
 };

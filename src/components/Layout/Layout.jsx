@@ -33,3 +33,4 @@ BaseLayout.propTypes = {
   className: string,
   children: node,
 };
+
