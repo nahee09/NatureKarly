@@ -8,7 +8,6 @@ import instagram from '@/assets/icons/Icon/footer/instagram.svg';
 import youtube from '@/assets/icons/Icon/footer/youtube.svg';
 import naverPost from '@/assets/icons/Icon/footer/naverPost.svg';
 
-
 import isms from '@/assets/icons/Icon/footer/logo_isms.svg';
 import privacy from '@/assets/icons/Icon/footer/logo_privacy.svg';
 import tosspayments from '@/assets/icons/Icon/footer/logo_tosspayments.svg';
@@ -146,7 +145,7 @@ export default function Footer() {
       <article className={classes.footerBottom}>
         <p>마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.</p>
         <p>마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.</p>
-        <small class="copyright"> © KURLY CORP. ALL RIGHTS RESERVED </small>
+        <small className="copyright"> © KURLY CORP. ALL RIGHTS RESERVED </small>
       </article>
     </footer>
   );
