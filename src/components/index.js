@@ -48,4 +48,8 @@ export * from './NormalNoticeContent/NormalNoticeContent';
 export * from './InquiryTitle/InquiryTitle';
 export * from './InquiryQuestion/InquiryQuestion';
 export * from './InquiryAnswer/InquiryAnswer';
+
+export * from './NavSide/NavSide';
+
 export * from './ReviewWriteButton/ReviewWriteButton';
+
