@@ -56,6 +56,12 @@
   border: 0.45rem solid var(--color-primary);
 }
 
+.input[type='checkbox'] {
+  border: 0;
+  background: url(@/assets/icons/Input/isChecked=false.svg) center center
+    no-repeat;
+}
+
 .input[type='checkbox']:checked {
   border: 0;
   background: url(@/assets/icons/Input/isChecked=true.svg) center center
