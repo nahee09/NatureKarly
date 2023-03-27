@@ -1,0 +1,6 @@
+.phoneValidation.invalid {
+  color: red;
+}
+.phoneValidation.valid {
+  color: #25e09a;
+}

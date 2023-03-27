@@ -1,0 +1,6 @@
+.emailValidation.invalid {
+  color: red;
+}
+.emailValidation.valid {
+  color: #25e09a;
+}

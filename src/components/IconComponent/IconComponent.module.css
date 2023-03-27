@@ -1,177 +1,185 @@
-.IconComponent {
+.iconComponent {
   display: flex;
+  flex-flow: row nowrap;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.iconComponent[data-is-need-curosr-pointer='true'] {
+  cursor: pointer;
+}
+
 /* ---------------------------------- cart ---------------------------------- */
-.IconComponent[data-image='cancel'] {
+.iconComponent[data-image='cancel'] {
   background-image: url(../../assets/icons/Icon/cart/cancel.svg);
 }
-.IconComponent[data-image='cart'] {
+.iconComponent[data-image='cart'] {
   background-image: url(../../assets/icons/Icon/cart/cart.svg);
 }
-.IconComponent[data-image='minusDisabled=false'] {
+.iconComponent[data-image='minusDisabled=false'] {
   background-image: url(../../assets/icons/Icon/cart/minusDisabled=false.svg);
 }
-.IconComponent[data-image='minusDisabled=true'] {
+.iconComponent[data-image='minusDisabled=true'] {
   background-image: url(../../assets/icons/Icon/cart/minusDisabled=true.svg);
 }
-.IconComponent[data-image='plusDisabled=false'] {
+.iconComponent[data-image='plusDisabled=false'] {
   background-image: url(../../assets/icons/Icon/cart/plusDisabled=false.svg);
 }
-.IconComponent[data-image='plusDisabled=true'] {
+.iconComponent[data-image='plusDisabled=true'] {
   background-image: url(../../assets/icons/Icon/cart/plusDisabled=true.svg);
 }
-.IconComponent[data-image='type=_Normal'] {
+.iconComponent[data-image='type=_Normal'] {
   background-image: url(../../assets/icons/Icon/cart/type=_Normal.svg);
 }
-.IconComponent[data-image='type=Frozen'] {
+.iconComponent[data-image='type=Frozen'] {
   background-image: url(../../assets/icons/Icon/cart/type=Frozen.svg);
 }
-.IconComponent[data-image='type=Refrigerated'] {
+.iconComponent[data-image='type=Refrigerated'] {
   background-image: url(../../assets/icons/Icon/cart/type=Refrigerated.svg);
 }
 
 /* --------------------------------- common --------------------------------- */
-.IconComponent[data-image='Direction=Down'] {
+.iconComponent[data-image='Direction=Down'] {
   background-image: url(../../assets/icons/Icon/common/Direction=Down.svg);
 }
-.IconComponent[data-image='GoToTop'] {
+.iconComponent[data-image='Direction=Right'] {
+  background-image: url(../../assets/icons/Icon/common/Direction=Right.svg);
+}
+.iconComponent[data-image='GoToTop'] {
   background-image: url(../../assets/icons/Icon/common/GoToTop.svg);
 }
 
 /* --------------------------------- footer --------------------------------- */
-.IconComponent[data-image='Blog'] {
+.iconComponent[data-image='Blog'] {
   background-image: url(../../assets/icons/Icon/footer/Blog.svg);
 }
-.IconComponent[data-image='faceBook'] {
+.iconComponent[data-image='faceBook'] {
   background-image: url(../../assets/icons/Icon/footer/faceBook.svg);
 }
-.IconComponent[data-image='instagram'] {
+.iconComponent[data-image='instagram'] {
   background-image: url(../../assets/icons/Icon/footer/instagram.svg);
 }
-.IconComponent[data-image='naverPost'] {
+.iconComponent[data-image='naverPost'] {
   background-image: url(../../assets/icons/Icon/footer/naverPost.svg);
 }
-.IconComponent[data-image='youtube'] {
+.iconComponent[data-image='youtube'] {
   background-image: url(../../assets/icons/Icon/footer/youtube.svg);
 }
 
 /* --------------------------------- header --------------------------------- */
-.IconComponent[data-image='close'] {
+.iconComponent[data-image='close'] {
   background-image: url(../../assets/icons/Icon/header/close.svg);
 }
-.IconComponent[data-image='hamburger'] {
+.iconComponent[data-image='hamburger'] {
   background-image: url(../../assets/icons/Icon/header/hamburger.svg);
 }
-.IconComponent[data-image='heart'] {
+.iconComponent[data-image='heart'] {
   background-image: url(../../assets/icons/Icon/header/heart.svg);
 }
-.IconComponent[data-image='location'] {
+.iconComponent[data-image='location'] {
   background-image: url(../../assets/icons/Icon/header/location.svg);
 }
-.IconComponent[data-image='type=_Cosmetics'] {
+.iconComponent[data-image='type=_Cosmetics'] {
   background-image: url(../../assets/icons/Icon/header/type=_Cosmetics.svg);
 }
-.IconComponent[data-image='type=_Detergent'] {
+.iconComponent[data-image='type=_Detergent'] {
   background-image: url(../../assets/icons/Icon/header/type=_Detergent.svg);
 }
-.IconComponent[data-image='type=_Salad'] {
+.iconComponent[data-image='type=_Salad'] {
   background-image: url(../../assets/icons/Icon/header/type=_Salad.svg);
 }
-.IconComponent[data-image='type=_TraditionalLiquor'] {
+.iconComponent[data-image='type=_TraditionalLiquor'] {
   background-image: url(../../assets/icons/Icon/header/type=_TraditionalLiquor.svg);
 }
-.IconComponent[data-image='type=_Vegetable'] {
+.iconComponent[data-image='type=_Vegetable'] {
   background-image: url(../../assets/icons/Icon/header/type=_Vegetable.svg);
 }
-.IconComponent[data-image='type=Baby'] {
+.iconComponent[data-image='type=Baby'] {
   background-image: url(../../assets/icons/Icon/header/type=Baby.svg);
 }
-.IconComponent[data-image='type=Bread'] {
+.iconComponent[data-image='type=Bread'] {
   background-image: url(../../assets/icons/Icon/header/type=Bread.svg);
 }
-.IconComponent[data-image='type=Coffee'] {
+.iconComponent[data-image='type=Coffee'] {
   background-image: url(../../assets/icons/Icon/header/type=Coffee.svg);
 }
-.IconComponent[data-image='type=Cook'] {
+.iconComponent[data-image='type=Cook'] {
   background-image: url(../../assets/icons/Icon/header/type=Cook.svg);
 }
-.IconComponent[data-image='type=Dog'] {
+.iconComponent[data-image='type=Dog'] {
   background-image: url(../../assets/icons/Icon/header/type=Dog.svg);
 }
-.IconComponent[data-image='type=Food'] {
+.iconComponent[data-image='type=Food'] {
   background-image: url(../../assets/icons/Icon/header/type=Food.svg);
 }
-.IconComponent[data-image='type=Fruit'] {
+.iconComponent[data-image='type=Fruit'] {
   background-image: url(../../assets/icons/Icon/header/type=Fruit.svg);
 }
-.IconComponent[data-image='type=Gift'] {
+.iconComponent[data-image='type=Gift'] {
   background-image: url(../../assets/icons/Icon/header/type=Gift.svg);
 }
-.IconComponent[data-image='type=Health'] {
+.iconComponent[data-image='type=Health'] {
   background-image: url(../../assets/icons/Icon/header/type=Health.svg);
 }
-.IconComponent[data-image='type=HomeAppliances'] {
+.iconComponent[data-image='type=HomeAppliances'] {
   background-image: url(../../assets/icons/Icon/header/type=HomeAppliances.svg);
 }
-.IconComponent[data-image='type=Meet'] {
+.iconComponent[data-image='type=Meet'] {
   background-image: url(../../assets/icons/Icon/header/type=Meet.svg);
 }
-.IconComponent[data-image='type=Oil'] {
+.iconComponent[data-image='type=Oil'] {
   background-image: url(../../assets/icons/Icon/header/type=Oil.svg);
 }
-.IconComponent[data-image='type=SeaFood'] {
+.iconComponent[data-image='type=SeaFood'] {
   background-image: url(../../assets/icons/Icon/header/type=SeaFood.svg);
 }
-.IconComponent[data-image='type=shampoo'] {
+.iconComponent[data-image='type=shampoo'] {
   background-image: url(../../assets/icons/Icon/header/type=shampoo.svg);
 }
-.IconComponent[data-image='type=Snack'] {
+.iconComponent[data-image='type=Snack'] {
   background-image: url(../../assets/icons/Icon/header/type=Snack.svg);
 }
-.IconComponent[data-image='type=Travel'] {
+.iconComponent[data-image='type=Travel'] {
   background-image: url(../../assets/icons/Icon/header/type=Travel.svg);
 }
-.IconComponent[data-image='type=Wine'] {
+.iconComponent[data-image='type=Wine'] {
   background-image: url(../../assets/icons/Icon/header/type=Wine.svg);
 }
 
 /* ---------------------------------- main ---------------------------------- */
-.IconComponent[data-image='circleArrow'] {
+.iconComponent[data-image='circleArrow'] {
   background-image: url(../../assets/icons/Icon/main/circleArrow.svg);
 }
 
 /* --------------------------------- product -------------------------------- */
-.IconComponent[data-image='Answer'] {
+.iconComponent[data-image='Answer'] {
   background-image: url(../../assets/icons/Icon/product/Answer.svg);
 }
-.IconComponent[data-image='lock'] {
+.iconComponent[data-image='lock'] {
   background-image: url(../../assets/icons/Icon/product/lock.svg);
 }
-.IconComponent[data-image='notice'] {
+.iconComponent[data-image='notice'] {
   background-image: url(../../assets/icons/Icon/product/notice.svg);
 }
-.IconComponent[data-image='Question'] {
+.iconComponent[data-image='Question'] {
   background-image: url(../../assets/icons/Icon/product/Question.svg);
 }
-.IconComponent[data-image='squreDisabled=false'] {
+.iconComponent[data-image='squreDisabled=false'] {
   background-image: url(../../assets/icons/Icon/product/squreDisabled=false.svg);
 }
-.IconComponent[data-image='squreDisabled=true'] {
+.iconComponent[data-image='squreDisabled=true'] {
   background-image: url(../../assets/icons/Icon/product/squreDisabled=true.svg);
 }
 
 /* ---------------------------------- sign ---------------------------------- */
-.IconComponent[data-image='greenArrow'] {
+.iconComponent[data-image='greenArrow'] {
   background-image: url(../../assets/icons/Icon/sign/greenArrow.svg);
 }
-.IconComponent[data-image='required'] {
+.iconComponent[data-image='required'] {
   background-image: url(../../assets/icons/Icon/sign/required.svg);
 }
 
 /* ---------------------------------- time ---------------------------------- */
-.IconComponent[data-image='time'] {
+.iconComponent[data-image='time'] {
   background-image: url(../../assets/icons/Icon/time.svg);
 }

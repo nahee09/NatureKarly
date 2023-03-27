@@ -1,0 +1,6 @@
+.birthValidation.invalid {
+  color: red;
+}
+.birthValidation.valid {
+  color: #25e09a;
+}

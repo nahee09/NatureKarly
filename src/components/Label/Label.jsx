@@ -4,23 +4,44 @@ import classes from './Label.module.css';
 import { A11yHidden } from '@/components';
 
 function classEssential(isEssential) {
-  if (isEssential) {
-    return classes.essential;
-  }
+  if (isEssential.includes('left')) return classes['essential-left'];
+  if (isEssential.includes('right')) return classes['essential-right'];
 
   return '';
 }
 
+const getFontSize = (variable) => {
+  if (variable === 'md') return '1rem';
+  if (variable === 'sm') return '0.75rem';
+  if (variable === 'lg') return '1.33125rem';
+  if (variable === 'xl') return '1.775rem';
+  if (variable === 'xxl') return '2.36875rem';
+
+  return '3.15625rem';
+};
 /* ----------------------------------------------------------------------- */
 
-export function Label({ htmlFor, isEssential, invisibleLabel, ...restProps }) {
+export function Label({
+  className,
+  htmlFor,
+  fontSize,
+  isEssential,
+  invisibleLabel,
+  children,
+  ...restProps
+}) {
   const combineClassNames = `${classes.label} ${classEssential(
     isEssential
-  )}`.trim();
+  )} ${className}`.trim();
   if (!invisibleLabel) {
     return (
-      <label className={combineClassNames} htmlFor={htmlFor} {...restProps}>
-        {htmlFor}
+      <label
+        className={combineClassNames}
+        htmlFor={htmlFor}
+        style={{ fontSize: `${getFontSize(fontSize)}` }}
+        {...restProps}
+      >
+        {children}
       </label>
     );
   }
@@ -36,12 +57,14 @@ export function Label({ htmlFor, isEssential, invisibleLabel, ...restProps }) {
 
 Label.defaultProps = {
   htmlFor: '',
-  isEssential: false,
+  fontSize: 'md',
+  isEssential: 'none',
   invisibleLabel: false,
 };
 
 Label.propTypes = {
   htmlFor: PropTypes.string,
-  isEssential: PropTypes.bool,
+  fontSize: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', 'xxl', 'xxxl']),
+  isEssential: PropTypes.oneOf(['none', 'left', 'right']),
   invisibleLabel: PropTypes.bool,
 };
