@@ -22,7 +22,11 @@ button {
 }
 
 .MinusButton {
-  background: url('../../assets/icons/Icon/cart/minusDisabled=true.svg');
+  background: url('../../assets/icons/Icon/cart/minusDisabled=false.svg');
+}
+
+.DisabledMinusButton {
+  background: url(../../assets/icons/Icon/cart/minusDisabled=true.svg);
 }
 
 .PlusButton {
