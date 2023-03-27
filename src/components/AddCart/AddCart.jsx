@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+
 import { A11yHidden, Button } from '../';
 
 import classes from './AddCart.module.css';
+import { modalCloseContext } from '@/components/ModalWindow/ModalWindow';
 
 const AddCart = function ({ name, price, totalprice }) {
   return (
@@ -29,6 +32,7 @@ const AddCart = function ({ name, price, totalprice }) {
               background: 'none',
               color: 'var(--color-content)',
             }}
+            onClick={useContext(modalCloseContext)}
           >
             취소
           </Button>

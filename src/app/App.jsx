@@ -1,6 +1,10 @@
-import classes from './App.module.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import classes from './App.module.css';
+
 import { BaseLayout } from '@/components/';
+import { ModalWindow } from '@/components/ModalWindow/ModalWindow';
+import AddCart from '@/components/AddCart/AddCart';
 
 import MainPage from '@/pages/Main/MainPage';
 import ProductDetail from '@/pages/ProductDetail/ProductDetail';
@@ -21,6 +25,9 @@ function App() {
             <Route path="/cartpage" element={<CartPage />} />
           </Routes>
         </BaseLayout>
+        <ModalWindow modalId="addCartModal">
+          <AddCart />
+        </ModalWindow>
       </div>
     </Router>
   );
