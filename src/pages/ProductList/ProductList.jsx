@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import classes from './ProductList.module.css';
 import {
   Container,
@@ -8,10 +10,17 @@ import {
   Label,
 } from '@/components';
 
+import { useReadData } from '@/firebase/firestore';
+
 /* -------------------------------------------------------------------------- */
 
 export default function ProductList() {
   const dataProps = { width: '18px', height: '18px' };
+  const { readData, data } = useReadData('products');
+
+  useEffect(() => {
+    readData();
+  }, [readData]);
 
   return (
     <div className={classes.productList}>
@@ -40,16 +49,16 @@ export default function ProductList() {
               />
             </button>
             <ul className={classes.activeContents}>
-              <li>
-                <Input id="감자밭" type="checkbox" />
-                <Label htmlFor="감자밭">감자밭</Label>
-                <span className={classes.count}>1</span>
-              </li>
-              <li>
-                <Input id="강남면옥" type="checkbox" />
-                <Label htmlFor="강남면옥">감자밭</Label>
-                <span className={classes.count}>1</span>
-              </li>
+              {data &&
+                data.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <Input id={item.brand} type="checkbox" />
+                      <Label htmlFor={item.brand}>{item.brand}</Label>
+                      <span className={classes.count}>1</span>
+                    </li>
+                  );
+              })}
             </ul>
           </li>
           <li>
@@ -90,7 +99,7 @@ export default function ProductList() {
           </li>
         </ul>
         <div className={classes.product}>
-          <span>{`총 1건`}</span>
+          <span>{`총 ${data && data.length}건`}</span>
           <ul className={classes.orderby}>
             <li>
               <button type="button">추천순</button>
