@@ -1,7 +1,7 @@
 import classes from './Counter.module.css';
 import { A11yHidden } from '@/components/A11yHidden/A11yHidden';
 import { Button } from '@/components/Button/Button';
-import { Input } from '@/components/Input/Input';
+import { Input } from '@/components/Input/General/Input';
 import { useState } from 'react';
 
 const Counter = function ({...restProps}) {

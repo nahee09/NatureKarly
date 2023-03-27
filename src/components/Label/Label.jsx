@@ -26,6 +26,7 @@ export function Label({
   isEssential,
   invisibleLabel,
   labelStyle,
+  children,
   ...restProps
 }) {
   const combineClassNames = `${classes.label} ${
@@ -36,7 +37,7 @@ export function Label({
       <label
         className={combineClassNames}
         htmlFor={htmlFor}
-        style={{ fontSize: `${getFontSize(fontSize)}` }}
+        // style={{ fontSize: `${getFontSize(fontSize)}` }}
         {...restProps}
       >
         {children}

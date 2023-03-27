@@ -1,14 +1,14 @@
 import {} from 'prop-types';
 import { useEffect, useRef } from 'react';
 
-import { usesetRecoilState, useRecoilValue } from 'recoil';
+import { useSetRecoilState, useRecoilValue } from 'recoil';
 
 import classes from './ProductPopUpInput.module.css';
 import { showModalState } from '@/@store/modalStates';
 import { titleText } from '@/@store/popUpTextState';
 
 export function ProductPopUpInput({ inputName }) {
-  const setTitle = usesetRecoilState(titleText);
+  const setTitle = useSetRecoilState(titleText);
   const titleInput = useRef();
   const modal = useRecoilValue(showModalState);
   function getTitleText(e) {

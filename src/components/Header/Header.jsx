@@ -148,6 +148,6 @@ export default function Header({ navList: initialNavList }) {
 };
 
 Header.propTypes = {
-  navList: PropTypes.arrayOf(NavLinkType),
+  // navList: PropTypes.arrayOf(NavLinkType),
 };
 
