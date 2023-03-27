@@ -57,7 +57,7 @@ export const isPhoneNumber = (value, withoutHyphen = false) => {
   if (withoutHyphen && updatedValue.length < 12) {
     updatedValue = updatedValue.split('');
     let firstNumber = updatedValue.splice(0, 3).join('');
-    let lastNumber = updatedValue.splice(value.length - 4).join('');
+    let lastNumber = updatedValue.splice(updatedValue.length - 4).join('');
     let middleNumber = updatedValue.join('');
     updatedValue = `${firstNumber}-${middleNumber}-${lastNumber}`;
   }
