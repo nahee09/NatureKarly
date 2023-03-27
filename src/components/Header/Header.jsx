@@ -55,7 +55,7 @@ export default function Header({ navList: initialNavList }) {
             <div className={classes.headerSearch}>
               <div className={classes.headerSwitch}>
                 <Logo />
-                <a href="#">마켓칼리</a>
+                <a href="#" className={classes.activeSwitch}>마켓칼리</a>
                 <span aria-hidden="true">|</span>
                 <a href="#">뷰티칼리</a>
               </div>

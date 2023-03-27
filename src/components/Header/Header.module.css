@@ -28,7 +28,6 @@
   color: var(--color-primary);
 }
 
-
 .headerSearch{
   display: flex;
 }
@@ -46,6 +45,10 @@
   padding: 0 0.625rem;
   text-decoration: none;
   color: var(--color-content);
+}
+
+.headerSwitch .activeSwitch{
+  color: var(--color-primary);
 }
 
 .headerSearchForm{
