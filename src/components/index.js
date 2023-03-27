@@ -6,3 +6,4 @@ export * from './Container/Container';
 export * from './Nav/Nav';
 export * from './Label/Label';
 export * from './IconComponent/IconComponent';
+export * from './NavSide/NavSide';

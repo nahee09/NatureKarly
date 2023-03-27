@@ -1,3 +1,15 @@
+.originHeader{
+  background-color: var(--color-white);
+}
+
+.smallHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
 .headerTop{
   margin-top: .75rem;
 }
@@ -67,4 +79,23 @@
 
 .headerIconList li {
   text-align: center;
+}
+
+.navWrapper{
+  display: flex;
+  align-items: center;
+}
+
+
+/* 스크롤 시 바뀐 헤더 컴포넌트 */
+.smallHeaderTop{
+  display: flex;
+}
+
+.smallForm input::placeholder{
+  font-size: .875rem;
+}
+
+.smallHeaderIconList li{
+  padding: 0 0.5rem;
 }
