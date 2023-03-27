@@ -1,0 +1,9 @@
+.title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  line-height: var(--line-height-sm);
+  text-align: center;
+  margin: 12px 0;
+  color: var(--color-content);
+  margin-bottom: 1.75rem;
+}

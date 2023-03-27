@@ -22,12 +22,12 @@
   --color-error: #f03f40;
 
   /* -------------------------------- font-size ------------------------------- */
-  --font-sm: 0.75rem;
-  --font-md: 1rem;
-  --font-lg: 1.33125rem;
-  --font-xl: 1.775rem;
-  --font-xxl: 2.36875rem;
-  --font-xxxl: 3.15625rem;
+  --font-sm: 0.75rem; /* 12px */
+  --font-md: 1rem; /* 16px */
+  --font-lg: 1.33125rem; /* 21.3px */
+  --font-xl: 1.775rem; /* 28.4px */
+  --font-xxl: 2.36875rem; /* 37.9px */
+  --font-xxxl: 3.15625rem; /* 50.5px */
 
   /* ------------------------------- line-height ------------------------------ */
   --line-height-sm: 140%;
