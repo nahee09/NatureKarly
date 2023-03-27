@@ -4,17 +4,18 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-size: var(--font-md);
   font-weight: 600;
   position: relative;
+  width: 100%;
 }
 
 .navMenu{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  width: 60%;
+  justify-content: center;
+  width: 70%;
 }
 
 .navMenu li{
@@ -30,21 +31,3 @@
   text-decoration: underline;
   color: var(--color-primary);
 }
-
-.navSide{
-  width: 13%;
-  height: 1.6875rem;
-  line-height: 1.6875rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--color-content);
-  border: 1px solid var(--color-gray-300);
-  border-radius: 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.navSide span:first-child{
-  color: var(--color-primary);
-}
-
