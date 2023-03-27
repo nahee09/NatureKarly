@@ -2,12 +2,22 @@ import { useContext } from 'react';
 
 import { string } from 'prop-types';
 
+import { useResetRecoilState } from 'recoil';
+
 import { A11yHidden, IconComponent } from '..';
 
 import classes from './ProductPopUpTitle.module.css';
+import { contentText } from '@/@store/popUpTextState';
 import { modalCloseContext } from '@/components/ModalWindow/ModalWindow';
 
 export function ProductPopUpTitle({ title, image, alt, imageTitle }) {
+  const resetButton = useResetRecoilState(contentText);
+  const contextFunction = useContext(modalCloseContext);
+  const handleCloseButton = () => {
+    resetButton();
+    contextFunction();
+  };
+
   return (
     <>
       <section className={classes.popUpTitle}>
@@ -15,7 +25,7 @@ export function ProductPopUpTitle({ title, image, alt, imageTitle }) {
         <button
           className={classes.closeButton}
           type="button"
-          onClick={useContext(modalCloseContext)}
+          onClick={handleCloseButton}
         >
           <A11yHidden>
             <span>닫기</span>
