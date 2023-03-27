@@ -4,17 +4,9 @@ import { Button } from '@/components/Button/Button';
 import { Input } from '@/components/Input/Input';
 import { useState } from 'react';
 
-const Counter = function () {
-  const [count, setCount] = useState(1);
-
-  const onDecrease = function () {
-    setCount(prevCount => prevCount - 1)
-  }
-
-  const onIncrease = function () {
-    setCount(prevCount => prevCount + 1)
-  }
-
+const Counter = function ({...restProps}) {
+  const { count, onDecrease, onIncrease} = restProps;
+  
   return (
     <div className={classes.Counter}>
       <Button className={count == 1 ? classes.DisabledMinusButton : classes.MinusButton} onClick={onDecrease} disabled={count == 1 ? true : false}>

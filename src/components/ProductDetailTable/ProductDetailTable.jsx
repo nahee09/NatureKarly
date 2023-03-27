@@ -1,12 +1,31 @@
 import ProductInformation from './ProductInformation/ProductInformation';
 import ProductPrice from './ProductPrice/ProductPrice';
 import { A11yHidden, Button } from '..';
+import { useState } from 'react';
 
 import TangTang from '../../assets/tangtang/detail_view.jpg';
 
 import classes from './ProductDetailTable.module.css';
 
 const ProductDetailTable = function ({ name, description, price }) {
+
+  const [count, setCount] = useState(1);
+
+  const onDecrease = function () {
+    setCount(prevCount => prevCount - 1)
+  }
+
+  const onIncrease = function () {
+    setCount(prevCount => prevCount + 1)
+  }
+  const productPrice = price
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const amountQuantity = price * count;
+  const totalPrice = amountQuantity
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
   return (
     <div className={classes.Inner}>
       <section className={classes.ProductDetailTable}>
@@ -16,7 +35,7 @@ const ProductDetailTable = function ({ name, description, price }) {
         <article className={classes.ProductInformationTable}>
           <p className={classes.Description}>{description}</p>
           <p className={classes.Price}>
-            {price}
+            {productPrice}
             <span>원</span>
           </p>
           <p className={classes.PointGuide}>
@@ -48,11 +67,11 @@ const ProductDetailTable = function ({ name, description, price }) {
               '-대두, 밀, 쇠고기 함유\n-계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조'
             }
           />
-          <ProductPrice name={name} price={price} title={'상품선택'} />
+          <ProductPrice name={name} price={productPrice} title={'상품선택'} count={count} onIncrease={onIncrease} onDecrease={onDecrease}/>
           <div className={classes.TotalPrice}>
             <p className={classes.TotalPriceText}>총 상품금액:</p>
             <p className={classes.Price}>
-              {price}
+              {totalPrice}
               <span>원</span>
             </p>
           </div>
