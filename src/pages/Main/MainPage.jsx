@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation, Keyboard, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -8,10 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './MainPage.swiper.css';
 import classes from './MainPage.module.css';
-import slideImg1 from '@/assets/banner/banner01.png';
-import slideImg2 from '@/assets/banner/banner02.png';
-import slideImg3 from '@/assets/banner/banner03.png';
-import slideImg4 from '@/assets/banner/banner04.png';
+
 import lineBanner from '@/assets/banner/line-banner01.png';
 
 import { Container, Product, Title } from '@/components';
@@ -21,7 +18,6 @@ import { useReadData } from '@/firebase/firestore';
 
 export default function MainPage() {
   const { readData, data } = useReadData('banner');
-  
   useEffect(() => {
     readData();
   }, [readData]);
@@ -31,10 +27,18 @@ export default function MainPage() {
       <Swiper
         className="visualSwiper"
         loop={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Keyboard, Autoplay]}
         navigation={true}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
+        keyboard={{
+          enabled: true,
+        }}
         pagination={{
           type: 'fraction',
+          clickable: true,
         }}
       >
         {data &&

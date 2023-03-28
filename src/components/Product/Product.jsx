@@ -47,6 +47,16 @@ export function Product({ isSwiper }) {
   if (isSwiper) {
     return (
       <div className="productSwiper">
+        <button
+          ref={prevRef}
+          className="swiper-button-prev"
+          type="button"
+        ></button>
+        <button
+          ref={nextRef}
+          className="swiper-button-next"
+          type="button"
+        ></button>
         <Swiper
           modules={[Navigation]}
           slidesPerGroup={4}
@@ -113,16 +123,6 @@ export function Product({ isSwiper }) {
               );
             })}
         </Swiper>
-        <button
-          ref={prevRef}
-          className="swiper-button-prev"
-          type="button"
-        ></button>
-        <button
-          ref={nextRef}
-          className="swiper-button-next"
-          type="button"
-        ></button>
       </div>
     );
   }

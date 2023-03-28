@@ -5,16 +5,14 @@ export * from './Product/Product';
 export * from './Button/Button';
 export * from './Input/General/Input';
 export * from './IconComponent/IconComponent';
-export * from './Container/Container';
 export * from './Nav/Nav';
 export * from './Label/Label';
-export * from './Container/Container';
-export * from './Tag/Tag';
 export * from './ModalWindow/ModalWindow';
 export * from './Title/Title';
 export * from './Tag/Tag';
 export * from './Layout/Layout';
-export * from './Counter/Counter'
+export * from './Skeleton/SkeletonProduct';
+export * from './Counter/Counter';
 
 /* ------------------------------- 내부 링크 이동 리스트 ------------------------------ */
 export * from './InternalLinkMove/InternalLinkMove';
