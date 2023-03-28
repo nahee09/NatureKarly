@@ -11,7 +11,6 @@ export * from './Tag/Tag';
 export * from './ModalWindow/ModalWindow';
 export * from './Title/Title';
 export * from './Layout/Layout';
-export * from './Skeleton/SkeletonProduct';
 export * from './Counter/Counter';
 
 /* ------------------------------- 내부 링크 이동 리스트 ------------------------------ */
