@@ -3,6 +3,7 @@ import {
   useEffect,
   // useLayoutEffect,
 } from 'react';
+import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { Navigation } from 'swiper';
@@ -69,7 +70,9 @@ export function Product({ isSwiper }) {
                     />
                   </div>
                   <ul className={classes.productInfo}>
-                    <li className={classes.name}>{item.name}</li>
+                    <li className={classes.name}>
+                      <Link to="/productdetail">{item.name}</Link>
+                    </li>
                     {item.salePrice ? (
                       <li className={classes.saleRatio}>
                         <p className={classes.saleRatioRate}>
@@ -128,7 +131,9 @@ export function Product({ isSwiper }) {
               </div>
               <ul className={classes.productInfo}>
                 <li className={classes.delivery}>샛별배송</li>
-                <li className={classes.name}>{item.name}</li>
+                <li className={classes.name}>
+                  <Link to="/productdetail">{item.name}</Link>
+                </li>
                 {item.salePrice ? (
                   <li className={classes.saleRatio}>
                     <p className={classes.saleRatioRate}>
@@ -153,8 +158,16 @@ export function Product({ isSwiper }) {
                 )}
                 <li className={classes.description}>{item.description}</li>
                 <li className={classes.icon}>
-                  {item.badge.karly ? <span className={classes.karly}>Karly Only</span> : ''}
-                  {item.badge.limit ? <span className={classes.limit}>한정수량</span>: '' }
+                  {item.badge.karly ? (
+                    <span className={classes.karly}>Karly Only</span>
+                  ) : (
+                    ''
+                  )}
+                  {item.badge.limit ? (
+                    <span className={classes.limit}>한정수량</span>
+                  ) : (
+                    ''
+                  )}
                 </li>
               </ul>
             </li>
