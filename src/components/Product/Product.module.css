@@ -8,6 +8,15 @@
   position: relative;
   margin-bottom: 1rem;
   font-size: 0;
+  overflow: hidden;
+}
+
+.productImg img{
+  transition: all .5s;
+}
+
+.productImg:hover img{
+  transform: scale(1.1);
 }
 
 .productInfo {
