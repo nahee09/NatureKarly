@@ -50,3 +50,4 @@ export * from './NavSide/NavSide';
 
 export * from './ReviewWriteButton/ReviewWriteButton';
 
+export * from './MainPopUp/MainPopUp';
