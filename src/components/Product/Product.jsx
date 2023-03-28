@@ -4,6 +4,7 @@ import {
   // useLayoutEffect,
 } from 'react';
 import { Link } from 'react-router-dom';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 
 import PropTypes from 'prop-types';
 import { Navigation } from 'swiper';
@@ -13,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import classes from './Product.module.css';
 
+import { modalStates, showModalState } from '@/@store/modalStates';
 import { A11yHidden, IconComponent } from '@/components';
 import {
   useReadData,
@@ -33,6 +35,9 @@ export function Product({ isSwiper }) {
   const datadata = { width: '45px', height: '45px' };
 
   const { readData, data } = useReadData('products');
+
+  const [modalState, setModalState] = useRecoilState(modalStates);
+  const setShowModal = useSetRecoilState(showModalState);
 
   useEffect(() => {
     readData();
@@ -67,6 +72,10 @@ export function Product({ isSwiper }) {
                       data-image="cart"
                       datadata={datadata}
                       role="button"
+                      onClick={() => {
+                        setModalState({ ...modalState, addCartModal: true });
+                        setShowModal(true);
+                      }}
                     />
                   </div>
                   <ul className={classes.productInfo}>
@@ -127,6 +136,10 @@ export function Product({ isSwiper }) {
                   data-image="cart"
                   datadata={datadata}
                   role="button"
+                  onClick={() => {
+                    setModalState({ ...modalState, addCartModal: true });
+                    setShowModal(true);
+                  }}
                 />
               </div>
               <ul className={classes.productInfo}>
