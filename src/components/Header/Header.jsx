@@ -22,6 +22,7 @@ import heart from '@/assets/icons/Icon/header/heart.svg';
 import cart from '@/assets/icons/Icon/header/Cart.svg';
 import down from '@/assets/icons/Icon/header/iconDown1.svg';
 import search from '@/assets/icons/Icon/header/Search.svg';
+
 export default function Header({ navList: initialNavList }) {
   const [navList] = useState(initialNavList);
 
@@ -31,6 +32,8 @@ export default function Header({ navList: initialNavList }) {
     function handleScroll() {
       setIsSticky(window.scrollY >= 166);
     }
+    
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
