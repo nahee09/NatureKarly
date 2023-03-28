@@ -6,7 +6,8 @@ import ProductList from '@/pages/ProductList/ProductList';
 import { SignUp } from '@/pages/SignUp/SignUp';
 
 function App() {
-  return <ProductDetailTable price={5000}/>
+  return <BaseLayout />
+  // return <ProductDetailTable price={5000}/>
 }
 
 export default App;

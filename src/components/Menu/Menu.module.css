@@ -1,5 +1,6 @@
 .menuWrapper{
   width: 22%;
+  position: relative;
 }
 
 .menu{
@@ -31,7 +32,8 @@
 
 .menuList{
   position: absolute;
-  top: 4rem;
+  left: -5px;
+  top: 72px;
   width: 15.4375rem;
   height: 55rem;
   border: 1px solid var(--color-gray-100);
@@ -39,7 +41,7 @@
 }
 
 .menuList a{
-  height: 1.5rem;
+  height: 40px;
   display: flex;
   align-items: center;
   padding: .5rem 0 .5rem 2.75rem;

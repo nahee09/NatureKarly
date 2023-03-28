@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import PropTypes from 'prop-types';
 
@@ -14,6 +14,7 @@ import heart from '@/assets/icons/Icon/header/heart.svg';
 import cart from '@/assets/icons/Icon/header/Cart.svg';
 import down from '@/assets/icons/Icon/header/iconDown1.svg';
 import search from '@/assets/icons/Icon/header/Search.svg';
+
 export default function Header({ navList: initialNavList }) {
   const [navList] = useState(initialNavList);
 
@@ -23,7 +24,8 @@ export default function Header({ navList: initialNavList }) {
     function handleScroll() {
       setIsSticky(window.scrollY >= 166);
     }
-
+    
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -105,7 +107,7 @@ export default function Header({ navList: initialNavList }) {
         <header className={classes.smallHeader}>
           <Container className={classes.headerContainer}>
             <div className={classes.smallHeaderTop}>
-              <Navigation headline="네비게이션" list={navList} />
+              <Navigation headline="네비게이션" list={navList} className={classes.smallNav}/>
               <form action="" className={`${classes.headerSearchForm} ${classes.smallForm}`}>
                 <fieldset>
                   <A11yHidden>검색 폼</A11yHidden>
