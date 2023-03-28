@@ -6,7 +6,7 @@ import mainPopUp from '@/assets/mainPopUp.svg';
 
 export function MainPopUp() {
   return (
-    <article>
+    <article className={classes.article}>
       <A11yHidden>메인 팝업</A11yHidden>
       <div className={classes.mainPopUpInner}>
         <a href="#">

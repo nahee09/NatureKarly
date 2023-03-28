@@ -41,7 +41,7 @@ export default function Footer() {
                 </Button>
                 <div>
                     <p>365일</p>
-                    <p>고객센터 운영시간에 순착적으로 답변드리겠습니다.</p>
+                    <p>고객센터 운영시간에 순차적으로 답변드리겠습니다.</p>
                 </div>
               </li>
               <li>
@@ -111,7 +111,7 @@ export default function Footer() {
         <ul className={classes.aboutMiddleList}>
           <li>
             <IconComponent>
-              <img src={isms} alt="정보보호관리체계" />
+              <a href="#"><img src={isms} alt="정보보호관리체계" /></a>
             </IconComponent>
             <div>
               <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 운영</p>
@@ -121,7 +121,7 @@ export default function Footer() {
           </li>
           <li>
             <IconComponent>
-              <img src={privacy} alt="개인정보보호" />
+              <a href="#"><img src={privacy} alt="개인정보보호" /></a>
             </IconComponent>
             <div>
               <p>개인정보보호 우수 웹사이트</p>
@@ -130,13 +130,13 @@ export default function Footer() {
           </li>
           <li>
             <IconComponent style={{ width: '102px', height: '32px' }}>
-              <img src={tosspayments} alt="토스페이먼츠" />
+              <a href="#"><img src={tosspayments} alt="토스페이먼츠" /></a>
             </IconComponent>
             <p>토스페이먼츠 구매안전(에스크로) 서비스<br/>를 이용하실 수 있습니다.</p>
           </li>
           <li>
             <IconComponent style={{ width: '34px', height: '34px' }}>
-              <img src={wooriBank} alt="우리은행" />
+              <a href="#"><img src={wooriBank} alt="우리은행" /></a>
             </IconComponent>
             <p>고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보<br/>증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
           </li>
