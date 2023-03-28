@@ -6,7 +6,7 @@
     "start": "npm run dev -- --open",
     "test": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/NatureKarly/",
     "preview": "vite preview",
     "lint": "eslint src --ext .tsx,.ts,.jsx,.js",
     "lint:fix": "npm run lint -- --fix",
