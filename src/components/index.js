@@ -7,9 +7,9 @@ export * from './Input/General/Input';
 export * from './IconComponent/IconComponent';
 export * from './Nav/Nav';
 export * from './Label/Label';
+export * from './Tag/Tag';
 export * from './ModalWindow/ModalWindow';
 export * from './Title/Title';
-export * from './Tag/Tag';
 export * from './Layout/Layout';
 export * from './Skeleton/SkeletonProduct';
 export * from './Counter/Counter';
@@ -51,3 +51,4 @@ export * from './NavSide/NavSide';
 
 export * from './ReviewWriteButton/ReviewWriteButton';
 
+export * from './MainPopUp/MainPopUp';
