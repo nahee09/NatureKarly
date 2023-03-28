@@ -35,7 +35,7 @@ import { PhoneValidation } from '@/components/InputValidation/Phone/PhoneValidat
 import { RePasswordValidation } from '@/components/InputValidation/RePassword/RePasswordValidation';
 import { useDocumentTitle } from '@/hook/useDocumentTitle';
 
-export function SignUp() {
+export default function SignUp() {
   const idId = useId();
   const passwordId = useId();
   const rePasswordId = useId();

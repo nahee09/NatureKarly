@@ -7,11 +7,15 @@
 .Counter {
   border: 1px solid var(--color-gray-200);
   text-align: center;
+  display: flex;
 }
 
-.Counter input,
-button {
-  background: none;
+.Counter 
+.CountInput,
+.MinusButton,
+.DisabledMinusButton,
+.PlusButton{
+  background-color: none;
   border: none;
   padding: 0;
 }
