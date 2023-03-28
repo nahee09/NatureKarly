@@ -9,6 +9,11 @@
   margin-bottom: 1rem;
   font-size: 0;
   overflow: hidden;
+  
+}
+
+.productImg a{
+  outline-offset: -1px;
 }
 
 .productImg img{
@@ -79,6 +84,7 @@
   right: 0.9375rem;
   bottom: 1.0625rem;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .icon > span{

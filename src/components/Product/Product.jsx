@@ -75,6 +75,7 @@ export function Product({ isSwiper }) {
                       data-image="cart"
                       dataProps={dataProps}
                       role="button"
+                      tabIndex="0"
                       onClick={() => {
                         setModalState({ ...modalState, addCartModal: true });
                         setShowModal(true);
@@ -141,6 +142,7 @@ export function Product({ isSwiper }) {
                   data-image="cart"
                   dataProps={dataProps}
                   role="button"
+                  tabIndex="0"
                   onClick={() => {
                     setModalState({ ...modalState, addCartModal: true });
                     setShowModal(true);
